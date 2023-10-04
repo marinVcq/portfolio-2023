@@ -1,0 +1,195 @@
+.home-container
+    @include width-height(100vw,100%)
+    @include flexbox(column, flex-start,center)
+    min-height: 100vh
+
+    .home-header
+        width: 100vw
+        height: 40rem
+        background-image: url('../assets/home/home-header-mobile.jpg')
+        background-position: top
+        background-size: cover
+        box-shadow: 0px 8px 21px -2px rgba(24,29,66,0.88)
+        h1
+            color: white
+            font-weight: 300
+            font-family: "Source Code Pro"
+            padding-right: 1rem
+    .home-content
+        color: rgb(15,15,35)
+        font-size: 2rem
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        gap: 2rem
+        padding: 2rem 1.5rem 2rem 1rem
+        background-image: url('../assets/home/abstract-pattern.jpg')
+        background-position: center
+        background-size: cover
+        height: 100%
+        width: 100vw
+
+        .subtitle
+            font-size: 2rem
+            font-weight: 300
+            font-family: "Poppins"
+            font-style: italic
+
+        h1
+            font-size: 2.5rem
+            text-transform: uppercase
+            font-style: italic
+
+        .home-description
+            font-size: 2rem
+            line-height: 3.2rem
+            max-width: 80%
+            text-align: center
+
+        .portrait-photo
+            width: 15rem
+            height: 15rem
+            background-image: url('../assets/shared/profil.jpg')
+            background-position: center
+            background-size: cover
+            border-radius: 50%
+            margin-top: 2rem
+            box-shadow: 0px 25px 38px -6px rgba(5,2,38,0.7)
+    .language-icons
+        margin-top: 2rem
+        display: flex
+        justify-content: center
+        width: 100%
+        gap: 2rem
+        flex-wrap: wrap
+        .language-icon
+            width: 20%
+            max-width: 8rem
+
+    .icon-links-container
+        margin: 2rem 0 2rem 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 1.5rem
+        width: 100%
+        height: 20rem
+
+        .icon-link
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 2rem
+            cursor: pointer
+            border: 2px solid rgb(25,25,45) // Marine Blue
+            border-radius: 1.2rem
+            padding: 0.4rem 1rem
+            max-width: 30rem
+            min-width: 30rem
+
+            p
+                font-size: 1.8rem
+                font-family: "Source Code Pro"
+                display: flex
+                justify-content: center
+                align-items: center
+            img
+                width: 4rem
+        
+    footer
+        width: 100vw
+        height: 6rem
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background-color: rgb(24,24,45) // Marine Blue
+        padding: 0 1rem 0 1rem
+        box-shadow: 0px -14px 48px 0px rgba(24,24,45,0.55) 
+        p
+            color: white
+            font-size: 1.2rem
+            font-weight: 300
+            font-style: italic
+        a
+
+            color: white
+
+@include respond(tablet)
+    .home-container
+        .home-header
+            height: 50rem
+            box-shadow: 0px 8px 21px -2px rgba(24,29,66,0.95)
+            background-image: url('../assets/home/home-header-tablet.jpg')
+            background-position: bottom
+            background-size: cover
+        .home-content
+            .portrait-photo
+                width: 25rem
+                height: 25rem
+@include respond(desktop)
+    .home-container
+        @include flexbox(row,space-between,flex-start)
+        flex-wrap: wrap
+        flex-direction: row-reverse
+        height: 100vh
+        width: 99vw
+        .home-header
+            background-image: url('../assets/home/home-header-desktop.png')
+            background-position: top
+            box-shadow: none
+            width: 40%
+            height: 100vh
+
+        .home-content
+            width: 60%
+            height: 100vh
+            background-image: url('../assets/home/abstract-pattern-desktop.jpg')
+            justify-content: center
+            padding-top: 7rem
+            .subtitle
+                font-size: 3rem
+            h1
+                font-size: 3.5rem
+            .home-description
+                font-size: 2.2rem
+                max-width: 70%
+
+            .portrait-photo
+                width: 35rem
+                height: 35rem
+                max-width: 35rem
+        .language-icons
+            margin: 3rem 0 3rem 0
+            display: flex
+            gap: 3rem
+            flex-wrap: wrap
+            .language-icon
+                width: 20%
+                max-width: 10rem
+        
+        .icon-links-container
+            margin: 2rem 0 2rem 0
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 1.5rem
+            width: 100%
+            height: 20rem
+
+            .icon-link
+                cursor: pointer
+                transition: all 0.4s ease-out
+                p
+                    cursor: pointer
+                img
+                    width: 4rem
+                    cursor: pointer
+                &:hover
+                    background-color: rgb(15,15,35)
+                    color: white
+                    font-weight: 300
+
+
+        
+

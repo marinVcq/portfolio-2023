@@ -16,6 +16,7 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 import Navbar from './components/Navbar';
+import ScrollToTop from './components/ScrollToTop';
 
 
 
@@ -23,6 +24,7 @@ const Layout = () => {
   return (
     <>
       <Navbar />
+      <ScrollToTop/>
       <Outlet />
     </>
   );

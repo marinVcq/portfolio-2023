@@ -1,0 +1,31 @@
+// Footer Mobile style 
+footer
+    @include width-height(100vw, 6rem)
+    @include flexbox(row, space-between, center)
+    background-color: rgb(24,24,45) // Marine Blue
+    padding: 0 1rem 0 1rem
+    box-shadow: 0px -14px 48px 0px rgba(24,24,45,0.55) 
+    margin-top: 2rem
+    
+    // Footer text content
+    p
+        @include set-font(white, Poppins, 1.2rem, 300, normal)
+    a
+        @include set-font(white, Poppins, 1.3rem, 400, normal)
+
+// Footer's tablet style
+@include respond(tablet)
+    footer
+        padding: 0 2rem 0 2rem
+
+        p
+            @include set-font(white, Poppins, 1.5rem, 300, normal)
+        a
+            @include set-font(white, Poppins, 1.8rem, 400, normal)
+
+// Footer's desktop style
+@include respond(desktop)
+    footer
+        width: 100%
+        p
+        a

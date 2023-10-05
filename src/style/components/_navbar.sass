@@ -1,20 +1,15 @@
 // Mobil design
 .navbar-container
+    @include width-height(100%, 7rem)
+    @include set-position(fixed,0,0)
     z-index: 10
-    width: 100vw
-    height: 7rem
-    position: fixed
-    top: 0
-    left: 0
 
+    // Blurred overlaying background
     .background-layer
+        @include width-height(100vw, 100%)
+        @include set-position(fixed,0,0)
         z-index: -1
-        position: fixed
-        bottom: 0
-        left: 0
-        width: 100vw
-        height: 100%
-        background-color: rgba(230,230,255,0.8)
+        background-color: rgba(230,230,255,0.92)
         transition: all 0.8s ease
         visibility: hidden
         opacity: 0
@@ -22,144 +17,122 @@
         visibility: visible
         opacity: 1
 
-
+    // Top container (contain photo, name and Burger btn nor links )
     .top-container
+        @include width-height(100vw, 6rem)
+        @include flexbox(row, space-between, center,0)
         z-index: 10
-        display: flex
-        justify-content: space-between
-        align-items: center
-        width: 100vw
-        height: 6rem
         background-color: rgb(25,25,45) // Marine Blue
-        color: white
 
         div
-            display: flex
-            padding-left: 1rem
-            .profil-photo
-                width: 4.5rem
-                height: 4.5rem
-                border-radius: 50%
-                background-image: url('../assets/shared/profil.jpg')
-                background-position: center
-                background-size: cover
+            @include flexbox(row, space-between, center,1.5rem)
+            margin-left: 1rem
+            
+            //Navbar profil photo
+            .profil-photo // rounded by class
+                @include width-height(4.4rem, 4.4rem)
+                @include set-background-image('../assets/shared/profil.jpg', center, cover)
+                display: none
 
+            // Navbar Brand
             .navbar-title
-                font-weight: 300
-                display: flex
-                justify-content: center
-                align-items: center
-                padding: 0 1rem 0 1rem
-                font-family: "Source Code Pro"
+                @include flexbox(row, center, center)
+                @include set-font(white,Source Code Pro, 2.5rem, 300,normal )
+                letter-spacing: 0.2rem
+        
+        // Burger Btn
         .menu-btn
-            width: 4rem
-            height: 4rem
+            @include width-height(4rem, 4rem)
             display: block
             margin-right: 2rem
-            cursor: pointer
 
+    // Links container (depends on viewport)
     .links-container-wrapped
+        @include width-height(100vw, auto)
+        @include flexbox(column, center,flex-start)
+        @include set-position(fixed, -24rem ,undefined,undefined,0)
         z-index: -1
-        position: fixed
-        top:-24rem
-        left: 0
-        width: 100vw
-        height: auto
         background-color: rgb(24,24,45) // Marine Blue
-        flex-direction: column
-        display: flex
         visibility: hidden
         transition: all 0.4s ease
         box-shadow: 0px 8px 21px -2px rgba(24,29,66,0.88)
+
+        // Each Link
         .link
-            color: white
-            font-size: 1.5rem
-            font-weight: 300
-            padding: 1.5rem 1rem 1.5rem 1rem
+            @include flexbox(row, flex-start, center, 1.5rem)
+            @include width-height(100%, 6rem)
+            @include set-font(white,Roboto, 1.5rem, 300,normal )
+            padding-left: 2rem
             border-top: 1px solid rgba(250,250,250,0.2)
-            height: 6rem
-            display: flex
-            align-items: center
-            gap: 1.2rem
+
+        // The double arrow wrap btn 
         .wrap-menu-btn
-            padding: 0rem 1rem 1.5rem 1rem
-            height: 6rem
-            display: flex
-            justify-content: center
-            align-items: flex-start
+            @include width-height(100%, 6rem)
+            text-align: center
 
     .expand
         visibility: visible
         top: 6rem
-    
+
+// Tablet Design
 @include respond(tablet)
     .navbar-container
-        width: 100vw
-        height: 7rem
-        display: flex
-        justify-content: space-between
+        @include width-height(100vw, 7rem)
+        @include flexbox(row, space-between, center)
         background-color: rgb(25,25,45) // Marine Blue
 
+        // Only the name and the photo
         .top-container
-            width: 40%
-            height: 7rem
-            background-color: transparent
-            .navbar-title
-                font-size: 2.4rem
-                padding: 0 2rem 0 2rem
+            @include width-height(40%, 7rem)
+
+            // Div for Photo and navbar title
+            div
+                .navbar-title
+                    font-size: 3rem
+                    padding-left: 2rem
+            // Hide Burger btn
             .menu-btn
                 display: none
+        // Hide the dropdown menu container
         .links-container-wrapped
             display: none
+        
+        // Tablet's links container
         .links-container-unwrapped
-            width: auto
-            color: white
-            font-size: 2rem
-            display: flex
-            justify-content: space-between
-            align-items: center
-            gap: 2.5rem
+            @include flexbox(row, space-between, center, 4rem)
             padding-right: 2rem
+            
+            // Each Link
             .link
-                color: white
-                font-size: 2rem
-                font-weight: 300
-                padding: 1.5rem 1rem 1.5rem 1rem
-                height: 7rem
-                display: flex
-                align-items: center
+                @include width-height(100%,7rem)
+                @include flexbox(row, center, center)
+                @include set-font(white, Roboto, 2.2rem, 300)
                 position: relative
 
+                // White selector line below selected Link
                 .selector
-                    position: absolute
-                    width: 100%
-                    height: 0.4rem
+                    @include width-height(100%, 0.4rem)
+                    @include set-position(absolute, undefined, undefined,0,0)
                     background-color: white
-                    bottom: 0
-                    left: 0
                     display: none
 
                 .selected
                     display: block
+
+// Desktop design
 @include respond(desktop)
     .navbar-container
-        width: 100%
-        left: 50%
-        transform: translateX(-50%)
         .top-container
             div
-                padding: 0
-                margin-left: 5rem
                 .navbar-title
-                    font-size: 2.4rem
-                    padding: 0 3rem 0 3rem
-                .menu-btn
-                    display: none
-        .links-container-wrapped
-            display: none
+                    font-size: 3.2rem
+                    letter-spacing: 0.3rem
+                    padding: 0 0 0 5rem
         .links-container-unwrapped
-            padding: 0
-            margin-right: 5rem
+            padding: 0 6rem 0 0 
+            @include flexbox(row, space-between, center, 6rem)
 
-
+            // Each Link
+            .link
+                font-size: 2.5rem
     

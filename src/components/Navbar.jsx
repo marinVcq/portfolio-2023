@@ -45,8 +45,8 @@ const Navbar = () => {
       <div className='top-container'>
 
         <div>       
-           <div className='profil-photo'></div>
-          <h2 className='navbar-title'>Marin Durand</h2>
+           <div className='profil-photo round'></div>
+          <h2 className='navbar-title'><span>&#60;</span> Marin/<span>&#62;</span></h2>
         </div>
 
         <img src={!navbarExpand ? Burger: Close} alt="burger btn" className={`menu-btn ${navbarExpand ? "rotate" : ""}`} onClick={handleToggle}></img>

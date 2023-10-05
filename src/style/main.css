@@ -66,7 +66,6 @@ h2 {
   justify-content: flex-start;
   align-items: center;
   gap: 0;
-  min-height: 100vh;
 }
 .home-container .home-header {
   width: 100vw;
@@ -74,7 +73,6 @@ h2 {
   background-image: url("../assets/home/home-header-mobile.jpg");
   background-position: top;
   background-size: cover;
-  box-shadow: 0px 8px 21px -2px rgba(24, 29, 66, 0.88);
 }
 .home-container .home-content {
   width: 100vw;
@@ -149,56 +147,56 @@ h2 {
   margin: 2rem 0 2rem 0;
 }
 .home-container .icon-links-container .icon-link {
+  width: 30rem;
+  height: 5.2rem;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  cursor: pointer;
+  color: rgb(15, 15, 35);
+  font-family: Source Code pro;
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
   border: 2px solid rgb(25, 25, 45);
   border-radius: 1.2rem;
-  padding: 0.4rem 1rem;
-  max-width: 30rem;
-  min-width: 30rem;
-}
-.home-container .icon-links-container .icon-link p {
-  font-size: 1.8rem;
-  font-family: "Source Code Pro";
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .home-container .icon-links-container .icon-link img {
-  width: 4rem;
-}
-
-footer {
-  width: 100vw;
-  height: 6rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(24, 24, 45);
-  padding: 0 1rem 0 1rem;
-  box-shadow: 0px -14px 48px 0px rgba(24, 24, 45, 0.55);
-  margin-top: 2rem;
-}
-footer p {
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 300;
-  font-style: italic;
-}
-footer a {
-  color: white;
+  width: 3.8rem;
+  height: 3.8rem;
 }
 
 @media only screen and (min-width: 650px) {
   .home-container .home-header {
+    width: 100%;
     height: 50rem;
-    box-shadow: 0px 8px 21px -2px rgba(24, 29, 66, 0.95);
     background-image: url("../assets/home/home-header-tablet.jpg");
     background-position: bottom;
     background-size: cover;
+  }
+  .home-container .home-content h1 {
+    color: rgb(15, 15, 35);
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 3rem;
+    font-style: italic;
+  }
+  .home-container .home-content .subtitle {
+    color: rgb(15, 15, 35);
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 2.5rem;
+    font-style: italic;
+  }
+  .home-container .home-content .home-description {
+    color: rgb(15, 15, 35);
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 2.4rem;
+    font-style: normal;
+    max-width: 90%;
+    line-height: 3.8rem;
   }
   .home-container .home-content .portrait-photo {
     width: 25rem;
@@ -207,79 +205,87 @@ footer a {
 }
 @media only screen and (min-width: 1025px) {
   .home-container {
+    width: 99vw;
+    height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: flex-start;
     gap: 0;
     flex-wrap: wrap;
-    flex-direction: row-reverse;
-    height: 100vh;
-    width: 99vw;
   }
   .home-container .home-header {
-    background-image: url("../assets/home/home-header-desktop.png");
-    background-position: top;
-    box-shadow: none;
     width: 40%;
     height: 100vh;
+    background-image: url("../assets/home/home-header-desktop.png");
+    background-position: top;
+    background-size: cover;
   }
   .home-container .home-content {
     width: 60%;
     height: 100vh;
     background-image: url("../assets/home/abstract-pattern-desktop.jpg");
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding-top: 7rem;
+    align-items: center;
+    gap: 4rem;
+    padding: 8rem 0 0 0;
   }
   .home-container .home-content .subtitle {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
   .home-container .home-content h1 {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
   }
   .home-container .home-content .home-description {
     font-size: 2.2rem;
-    max-width: 70%;
+    width: 70%;
   }
   .home-container .home-content .portrait-photo {
     width: 35rem;
     height: 35rem;
-    max-width: 35rem;
+    max-width: 35%;
+    max-height: 35%;
   }
   .home-container .language-icons {
-    margin: 3rem 0 3rem 0;
     display: flex;
-    gap: 3rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin: 3rem 0 3rem 0;
     flex-wrap: wrap;
   }
   .home-container .language-icons .language-icon {
-    width: 20%;
-    max-width: 10rem;
+    width: 100%;
+    height: auto;
+    min-width: 10rem;
   }
   .home-container .icon-links-container {
-    margin: 2rem 0 2rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
     width: 100%;
     height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2rem 0 2rem 0;
   }
   .home-container .icon-links-container .icon-link {
     cursor: pointer;
-    transition: all 0.4s ease-out;
-  }
-  .home-container .icon-links-container .icon-link p {
-    cursor: pointer;
+    transition: all 0.2s linear;
+    justify-content: space-between;
+    padding: 0 3rem 0 3rem;
   }
   .home-container .icon-links-container .icon-link img {
-    width: 4rem;
     cursor: pointer;
   }
   .home-container .icon-links-container .icon-link:hover {
-    background-color: rgb(15, 15, 35);
+    background-color: rgba(15, 15, 35, 0.9);
     color: white;
-    font-weight: 300;
   }
 }
 .projects-container {
@@ -559,9 +565,6 @@ footer a {
     justify-content: space-between;
     cursor: pointer;
   }
-  footer {
-    width: 100%;
-  }
 }
 .contact-container {
   width: 100vw;
@@ -571,21 +574,25 @@ footer a {
 }
 
 .navbar-container {
-  z-index: 10;
-  width: 100vw;
+  width: 100%;
   height: 7rem;
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
 }
 .navbar-container .background-layer {
-  z-index: -1;
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100vw;
   height: 100%;
-  background-color: rgba(230, 230, 255, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: rgba(230, 230, 255, 0.92);
   transition: all 0.8s ease;
   visibility: hidden;
   opacity: 0;
@@ -595,73 +602,90 @@ footer a {
   opacity: 1;
 }
 .navbar-container .top-container {
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100vw;
   height: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  z-index: 10;
   background-color: rgb(25, 25, 45);
-  color: white;
 }
 .navbar-container .top-container div {
   display: flex;
-  padding-left: 1rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: 1rem;
 }
 .navbar-container .top-container div .profil-photo {
-  width: 4.5rem;
-  height: 4.5rem;
-  border-radius: 50%;
+  width: 4.4rem;
+  height: 4.4rem;
   background-image: url("../assets/shared/profil.jpg");
   background-position: center;
   background-size: cover;
+  display: none;
 }
 .navbar-container .top-container div .navbar-title {
-  font-weight: 300;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0 1rem 0 1rem;
-  font-family: "Source Code Pro";
+  gap: 0;
+  color: white;
+  font-family: Source Code Pro;
+  font-weight: 300;
+  font-size: 2.5rem;
+  font-style: normal;
+  letter-spacing: 0.2rem;
 }
 .navbar-container .top-container .menu-btn {
   width: 4rem;
   height: 4rem;
   display: block;
   margin-right: 2rem;
-  cursor: pointer;
 }
 .navbar-container .links-container-wrapped {
-  z-index: -1;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
   position: fixed;
   top: -24rem;
   left: 0;
-  width: 100vw;
-  height: auto;
+  right: undefined;
+  bottom: undefined;
+  z-index: -1;
   background-color: rgb(24, 24, 45);
-  flex-direction: column;
-  display: flex;
   visibility: hidden;
   transition: all 0.4s ease;
   box-shadow: 0px 8px 21px -2px rgba(24, 29, 66, 0.88);
 }
 .navbar-container .links-container-wrapped .link {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 300;
-  padding: 1.5rem 1rem 1.5rem 1rem;
-  border-top: 1px solid rgba(250, 250, 250, 0.2);
-  height: 6rem;
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1.5rem;
+  width: 100%;
+  height: 6rem;
+  color: white;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 1.5rem;
+  font-style: normal;
+  padding-left: 2rem;
+  border-top: 1px solid rgba(250, 250, 250, 0.2);
 }
 .navbar-container .links-container-wrapped .wrap-menu-btn {
-  padding: 0rem 1rem 1.5rem 1rem;
+  width: 100%;
   height: 6rem;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  text-align: center;
 }
 .navbar-container .expand {
   visibility: visible;
@@ -673,17 +697,19 @@ footer a {
     width: 100vw;
     height: 7rem;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    gap: 0;
     background-color: rgb(25, 25, 45);
   }
   .navbar-container .top-container {
     width: 40%;
     height: 7rem;
-    background-color: transparent;
   }
-  .navbar-container .top-container .navbar-title {
-    font-size: 2.4rem;
-    padding: 0 2rem 0 2rem;
+  .navbar-container .top-container div .navbar-title {
+    font-size: 3rem;
+    padding-left: 2rem;
   }
   .navbar-container .top-container .menu-btn {
     display: none;
@@ -692,32 +718,37 @@ footer a {
     display: none;
   }
   .navbar-container .links-container-unwrapped {
-    width: auto;
-    color: white;
-    font-size: 2rem;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 2.5rem;
+    gap: 4rem;
     padding-right: 2rem;
   }
   .navbar-container .links-container-unwrapped .link {
-    color: white;
-    font-size: 2rem;
-    font-weight: 300;
-    padding: 1.5rem 1rem 1.5rem 1rem;
+    width: 100%;
     height: 7rem;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    gap: 0;
+    color: white;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 2.2rem;
+    font-style: normal;
     position: relative;
   }
   .navbar-container .links-container-unwrapped .link .selector {
-    position: absolute;
     width: 100%;
     height: 0.4rem;
-    background-color: white;
-    bottom: 0;
+    position: absolute;
+    top: undefined;
     left: 0;
+    right: undefined;
+    bottom: 0;
+    background-color: white;
     display: none;
   }
   .navbar-container .links-container-unwrapped .link .selected {
@@ -725,27 +756,72 @@ footer a {
   }
 }
 @media only screen and (min-width: 1025px) {
-  .navbar-container {
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .navbar-container .top-container div {
-    padding: 0;
-    margin-left: 5rem;
-  }
   .navbar-container .top-container div .navbar-title {
-    font-size: 2.4rem;
-    padding: 0 3rem 0 3rem;
-  }
-  .navbar-container .top-container div .menu-btn {
-    display: none;
-  }
-  .navbar-container .links-container-wrapped {
-    display: none;
+    font-size: 3.2rem;
+    letter-spacing: 0.3rem;
+    padding: 0 0 0 5rem;
   }
   .navbar-container .links-container-unwrapped {
-    padding: 0;
-    margin-right: 5rem;
+    padding: 0 6rem 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+  }
+  .navbar-container .links-container-unwrapped .link {
+    font-size: 2.5rem;
+  }
+}
+footer {
+  width: 100vw;
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  background-color: rgb(24, 24, 45);
+  padding: 0 1rem 0 1rem;
+  box-shadow: 0px -14px 48px 0px rgba(24, 24, 45, 0.55);
+  margin-top: 2rem;
+}
+footer p {
+  color: white;
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 1.2rem;
+  font-style: normal;
+}
+footer a {
+  color: white;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-style: normal;
+}
+
+@media only screen and (min-width: 650px) {
+  footer {
+    padding: 0 2rem 0 2rem;
+  }
+  footer p {
+    color: white;
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 1.5rem;
+    font-style: normal;
+  }
+  footer a {
+    color: white;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.8rem;
+    font-style: normal;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  footer {
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */

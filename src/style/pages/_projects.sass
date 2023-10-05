@@ -1,5 +1,7 @@
 .projects-container
-    padding-top: 7rem
+    padding-top: 8rem
+    max-width: 160rem
+    min-height: 100vh
     display: flex
     flex-direction: column
     justify-content: flex-start
@@ -7,13 +9,13 @@
     gap: 2rem
 
     header
-        margin-top: 1rem
         display: flex
         flex-direction: column
         align-items: flex-start
         justify-content: center
         gap: 1rem
-        width: 90%
+        width: 100%
+        padding: 0 2rem 0 2rem
         .page-title
             font-family: "Roboto"
             font-size: 2.4rem
@@ -24,7 +26,6 @@
             line-height: 2.4rem
             color: rgb(25,25,45) // Marine Blue
     .selector-container
-        margin-top: 2rem
         height: 5rem
         .selector-box
             display: flex
@@ -71,12 +72,13 @@
 
         h2
             text-transform: uppercase
-            margin: 0 5% 5% 5%
+            margin: 0 0 1rem 2rem
         .project
             width: 100%
             padding: 5%
             display: flex
             flex-direction: column
+            justify-content: space-between
             gap: 1rem
             .name
                 font-size: 2.2rem
@@ -86,6 +88,8 @@
                 font-size: 1.4rem
             .project-image
                 width: 100%
+                height: 25rem
+                object-fit: cover
                 border-radius: 0.8rem
             .link-container
                 display: flex
@@ -132,14 +136,27 @@
                 font-size: 2.4rem
                 line-height: 3rem
         .header-image
-            width: 20%
-            position: relative
-            left: -20rem
-            top: -5rem
+            width: 15%
+            align-self: flex-end
+            margin-right: 5rem
             display: none
         .selector-container
+            // background-color: green
+            flex-direction: row-reverse
+            align-items: flex-start
+            width: 100%
+            padding: 0 2rem 0 2rem
+            display: flex
+            gap: 1rem
+            
             .selector-box
-                width: 34rem
+                width: 48%
+                .selected-value
+                    font-size: 2rem
+            .values
+                margin: 0
+                width: 50%
+                .value
                 
         .projects-section
             display: flex
@@ -147,6 +164,7 @@
             justify-content: space-between
             gap: 2rem
             padding: 0 1rem 0 1rem
+            margin-top: 14rem
 
             h2
                 font-size: 2.5rem
@@ -158,6 +176,13 @@
                 padding: 2rem
                 border-radius: 0.6rem
 
+                .name
+
+                .project-image
+                    width: auto
+                    height: 25rem
+                    object-fit: cover
+
 
                 .link-container
                     justify-content: space-between
@@ -165,6 +190,7 @@
 
 @include respond(desktop)
     .projects-container
+        width: 99vw
         header
             margin-top: 2rem
             gap: 2rem
@@ -183,8 +209,22 @@
             top: -5rem
             display: none
         .selector-container
+            
             .selector-box
                 width: 34rem
+                .selector-arrow
+                    cursor: pointer
+            .values
+                width: 34rem
+                .value
+                    height: 5rem
+                    cursor: pointer
+                    display: flex
+                    align-items: center
+                    font-size: 1.8rem
+                    &:hover
+                        background-color: rgba(25,25,45,0.8)
+                        color: white
                 
         .projects-section
             display: flex
@@ -192,7 +232,7 @@
             justify-content: space-between
             gap: 2rem
             padding: 0 1rem 0 1rem
-
+            margin-top: 20rem
             h2
                 font-size: 2.5rem
                 margin: 0 0 0 2rem
@@ -202,7 +242,11 @@
                 width: 31%
                 padding: 2rem
                 border-radius: 0.6rem
+                z-index: 0
 
 
                 .link-container
                     justify-content: space-between
+                    cursor: pointer
+    footer
+        width: 100%

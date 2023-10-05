@@ -18,18 +18,18 @@ const Projects = () => {
     {
       name: "C-Based Chat Application", 
       category: "network", 
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos labore quia cupiditate, dicta, quis officiis maxime nostrum explicabo corrupti delectus aspernatur? Est cumque nesciunt iste soluta nihil recusandae, enim quia? ",
+      description: " officiis maxime nostrum explicabo corrupti delectus aspernatur? Est cumque nesciunt iste soluta nihil recusandae, enim quia? ",
       imagePath: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1600",
       github: "github link here",
       deploy: "yes",
     },
     {
-      name: "UDP streamed Keylogger (Windows API)", 
+      name: "Streamed Keylogger (Win32 API)", 
       category: "network", 
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos labore quia cupiditate, dicta, quis officiis maxime nostrum explicabo corrupti delectus aspernatur? Est cumque nesciunt iste soluta nihil recusandae, enim quia? ",
+      description: "Lorem, ipsum dolor maxime nostrum explicabo corrupti delectus aspernatur? Est cumque nesciunt iste soluta nihil recusandae, enim quia? ",
       imagePath: "https://images.unsplash.com/photo-1555532538-dcdbd01d373d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1928&q=80",
       github: "github link here",
-      deploy: "yes",
+      deploy: "",
     },
     {
       name: "C-Based HTTP live Server", 
@@ -59,57 +59,62 @@ const Projects = () => {
   };
 
   return (
-    <div className='projects-container'>
+    <>
+      <div className='projects-container'>
 
-      <header>
-        <h1 className='page-title'>My Projects</h1>
-        <p className='header-description'>This section is a curated collection of personal and academic projects, 
-          showcasing the hands-on experiences that shape my IT and DevOps exploration.
-        </p>
-      </header>
+        <header>
+          <h1 className='page-title'>My Projects</h1>
+          <p className='header-description'>This section is a curated collection of personal and academic projects, 
+            showcasing the hands-on experiences that shape my IT and DevOps exploration.
+          </p>
+        </header>
 
-      <div className='selector-container'>
+        <div className='selector-container'>
 
-        <div className='selector-box'>
-          <p className='selected-value'>{category}</p>
-          <img className={`selector-arrow ${catDropdown ? "rotate" : ""}`} src={SelectArrow} onClick={handleDropdown}></img>
+          <div className='selector-box'>
+            <p className='selected-value'>{category}</p>
+            <img className={`selector-arrow ${catDropdown ? "rotate" : ""}`} src={SelectArrow} onClick={handleDropdown}></img>
+          </div>
+
+          <div className={`values ${catDropdown ? "expand" : ""}`}>
+            <p className='value' onClick={() => handleCat("all categories")}>All categories</p>
+            <p className='value' onClick={() => handleCat("network")}>Network</p>
+            <p className='value' onClick={() => handleCat("web")}>Web</p>
+            <p className='value' onClick={() => handleCat("game")}>Game</p>
+            <p className='value' onClick={() => handleCat("software")}>Software</p>
+          </div>
+
         </div>
 
-        <div className={`values ${catDropdown ? "expand" : ""}`}>
-          <p className='value' onClick={() => handleCat("all categories")}>All categories</p>
-          <p className='value' onClick={() => handleCat("network")}>Network</p>
-          <p className='value' onClick={() => handleCat("web")}>Web</p>
-          <p className='value' onClick={() => handleCat("game")}>Game</p>
-          <p className='value' onClick={() => handleCat("software")}>Software</p>
-        </div>
+        <img src={Laptop} className='header-image'></img>
+
+        <section className="projects-section">
+          <h2 className="project-category">{category}</h2>
+          {filteredProjects.map((project, index) => (
+            <div key={index} className="project" style={{ backgroundColor: getBackgroundColor(index) }}>
+              <p className='name'>{project.name}</p>
+              <img className='project-image' src={project.imagePath}></img>
+              <p className='label'>Description</p>
+              <p className='description'>{project.description}</p>
+
+              <div className='link-container'>
+                <Link className='project-link' to={project.github}>View on Github<img src={GithubIcon} alt="Official Github icon"></img></Link>
+                
+                {project.deploy != "" ? <><p>Or</p><Link className='project-link deploy' to={project.github}>Check deploy</Link></>: "" }
+              </div>
+            </div>
+          ))}
+        </section>
+
+
 
       </div>
 
-      <img src={Laptop} className='header-image'></img>
-
-      <section className="projects-section">
-        <h2 className="project-category">{category}</h2>
-        {filteredProjects.map((project, index) => (
-          <div key={index} className="project" style={{ backgroundColor: getBackgroundColor(index) }}>
-            <p className='name'>{project.name}</p>
-            <img className='project-image' src={project.imagePath}></img>
-            <p className='label'>Description</p>
-            <p className='description'>{project.description}</p>
-
-            <div className='link-container'>
-              <Link className='project-link' to={project.github}>View on Github<img src={GithubIcon} alt="Official Github icon"></img></Link>
-              
-              {project.deploy != null ? <><p>Or</p><Link className='project-link deploy' to={project.github}>Check deploy</Link></>: "" }
-            </div>
-          </div>
-        ))}
-      </section>
-
       <footer>
-        <p>Designed by Marin Durand</p> <p>powered by <a>React.js</a></p>
+      <p>Designed by Marin Durand</p> <p>powered by <a>React.js</a></p>
       </footer>
 
-    </div>
+    </>
   )
 }
 

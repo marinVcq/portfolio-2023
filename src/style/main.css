@@ -54,6 +54,10 @@ h2 {
   font-size: 2rem;
 }
 
+.round {
+  border-radius: 50%;
+}
+
 .home-container {
   width: 100vw;
   height: 100%;
@@ -61,6 +65,7 @@ h2 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  gap: 0;
   min-height: 100vh;
 }
 .home-container .home-header {
@@ -71,74 +76,77 @@ h2 {
   background-size: cover;
   box-shadow: 0px 8px 21px -2px rgba(24, 29, 66, 0.88);
 }
-.home-container .home-header h1 {
-  color: white;
-  font-weight: 300;
-  font-family: "Source Code Pro";
-  padding-right: 1rem;
-}
 .home-container .home-content {
-  color: rgb(15, 15, 35);
-  font-size: 2rem;
+  width: 100vw;
+  height: 100%;
+  background-image: url("../assets/home/abstract-pattern.jpg");
+  background-position: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
   padding: 2rem 1.5rem 2rem 1rem;
-  background-image: url("../assets/home/abstract-pattern.jpg");
-  background-position: center;
-  background-size: cover;
-  height: 100%;
-  width: 100vw;
-}
-.home-container .home-content .subtitle {
-  font-size: 2rem;
-  font-weight: 300;
-  font-family: "Poppins";
-  font-style: italic;
 }
 .home-container .home-content h1 {
+  color: rgb(15, 15, 35);
+  font-family: Roboto;
+  font-weight: bold;
   font-size: 2.5rem;
+  font-style: italic;
   text-transform: uppercase;
+}
+.home-container .home-content .subtitle {
+  color: rgb(15, 15, 35);
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 2rem;
   font-style: italic;
 }
 .home-container .home-content .home-description {
+  color: rgb(15, 15, 35);
+  font-family: Roboto;
+  font-weight: 300;
   font-size: 2rem;
+  font-style: normal;
   line-height: 3.2rem;
   max-width: 80%;
   text-align: center;
 }
 .home-container .home-content .portrait-photo {
-  width: 15rem;
-  height: 15rem;
+  width: 17rem;
+  height: 17rem;
   background-image: url("../assets/shared/profil.jpg");
   background-position: center;
   background-size: cover;
-  border-radius: 50%;
-  margin-top: 2rem;
   box-shadow: 0px 25px 38px -6px rgba(5, 2, 38, 0.7);
 }
 .home-container .language-icons {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
   width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
   gap: 2rem;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 .home-container .language-icons .language-icon {
   width: 20%;
+  height: 20%;
   max-width: 8rem;
 }
 .home-container .icon-links-container {
-  margin: 2rem 0 2rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
   width: 100%;
   height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem 0 2rem 0;
 }
 .home-container .icon-links-container .icon-link {
   display: flex;
@@ -203,6 +211,7 @@ footer a {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 0;
     flex-wrap: wrap;
     flex-direction: row-reverse;
     height: 100vh;
@@ -274,7 +283,9 @@ footer a {
   }
 }
 .projects-container {
-  padding-top: 7rem;
+  padding-top: 8rem;
+  max-width: 160rem;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -282,13 +293,13 @@ footer a {
   gap: 2rem;
 }
 .projects-container header {
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 1rem;
-  width: 90%;
+  width: 100%;
+  padding: 0 2rem 0 2rem;
 }
 .projects-container header .page-title {
   font-family: "Roboto";
@@ -302,7 +313,6 @@ footer a {
   color: rgb(25, 25, 45);
 }
 .projects-container .selector-container {
-  margin-top: 2rem;
   height: 5rem;
 }
 .projects-container .selector-container .selector-box {
@@ -354,13 +364,14 @@ footer a {
 }
 .projects-container .projects-section h2 {
   text-transform: uppercase;
-  margin: 0 5% 5% 5%;
+  margin: 0 0 1rem 2rem;
 }
 .projects-container .projects-section .project {
   width: 100%;
   padding: 5%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 1rem;
 }
 .projects-container .projects-section .project .name {
@@ -374,6 +385,9 @@ footer a {
 }
 .projects-container .projects-section .project .project-image {
   width: 100%;
+  height: 25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 0.8rem;
 }
 .projects-container .projects-section .project .link-container {
@@ -426,14 +440,28 @@ footer a {
     line-height: 3rem;
   }
   .projects-container .header-image {
-    width: 20%;
-    position: relative;
-    left: -20rem;
-    top: -5rem;
+    width: 15%;
+    align-self: flex-end;
+    margin-right: 5rem;
     display: none;
   }
+  .projects-container .selector-container {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 2rem 0 2rem;
+    display: flex;
+    gap: 1rem;
+  }
   .projects-container .selector-container .selector-box {
-    width: 34rem;
+    width: 48%;
+  }
+  .projects-container .selector-container .selector-box .selected-value {
+    font-size: 2rem;
+  }
+  .projects-container .selector-container .values {
+    margin: 0;
+    width: 50%;
   }
   .projects-container .projects-section {
     display: flex;
@@ -441,6 +469,7 @@ footer a {
     justify-content: space-between;
     gap: 2rem;
     padding: 0 1rem 0 1rem;
+    margin-top: 14rem;
   }
   .projects-container .projects-section h2 {
     font-size: 2.5rem;
@@ -452,11 +481,20 @@ footer a {
     padding: 2rem;
     border-radius: 0.6rem;
   }
+  .projects-container .projects-section .project .project-image {
+    width: auto;
+    height: 25rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .projects-container .projects-section .project .link-container {
     justify-content: space-between;
   }
 }
 @media only screen and (min-width: 1025px) {
+  .projects-container {
+    width: 99vw;
+  }
   .projects-container header {
     margin-top: 2rem;
     gap: 2rem;
@@ -481,12 +519,30 @@ footer a {
   .projects-container .selector-container .selector-box {
     width: 34rem;
   }
+  .projects-container .selector-container .selector-box .selector-arrow {
+    cursor: pointer;
+  }
+  .projects-container .selector-container .values {
+    width: 34rem;
+  }
+  .projects-container .selector-container .values .value {
+    height: 5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+  }
+  .projects-container .selector-container .values .value:hover {
+    background-color: rgba(25, 25, 45, 0.8);
+    color: white;
+  }
   .projects-container .projects-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 2rem;
     padding: 0 1rem 0 1rem;
+    margin-top: 20rem;
   }
   .projects-container .projects-section h2 {
     font-size: 2.5rem;
@@ -497,11 +553,23 @@ footer a {
     width: 31%;
     padding: 2rem;
     border-radius: 0.6rem;
+    z-index: 0;
   }
   .projects-container .projects-section .project .link-container {
     justify-content: space-between;
+    cursor: pointer;
+  }
+  footer {
+    width: 100%;
   }
 }
+.contact-container {
+  width: 100vw;
+  height: 100vh;
+  max-width: 160rem;
+  padding-top: 8rem;
+}
+
 .navbar-container {
   z-index: 10;
   width: 100vw;
@@ -657,6 +725,11 @@ footer a {
   }
 }
 @media only screen and (min-width: 1025px) {
+  .navbar-container {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .navbar-container .top-container div {
     padding: 0;
     margin-left: 5rem;

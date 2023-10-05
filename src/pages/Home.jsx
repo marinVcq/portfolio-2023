@@ -9,23 +9,20 @@ const Home = () => {
   return (
     <div className='home-container'>
 
-      <header className='home-header'>
-        <h1>2023</h1>
-      </header>
+      <header className='home-header'></header>
 
       <section className='home-content'>
 
         <div>
           <h1>I'm <span>Marin Durand</span></h1>  
           <p className='subtitle'>Welcome on my student portfolio!</p>
-                  
         </div>
 
         <p className='home-description'>
-        Currently in my third year of a Bachelor's program at Brest Open Campus, I'm studying about software development and IT industry.
+          Currently in my third year of a Bachelor's program at Brest Open Campus, I'm studying about software development and IT industry.
         </p>
 
-        <div className='portrait-photo'></div>
+        <div className='portrait-photo round'></div>
       </section>
 
       {/* From devicon.dev dont forget this */}

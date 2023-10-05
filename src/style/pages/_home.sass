@@ -3,80 +3,59 @@
     @include flexbox(column, flex-start,center)
     min-height: 100vh
 
+    // Photo Header style
     .home-header
-        width: 100vw
-        height: 40rem
-        background-image: url('../assets/home/home-header-mobile.jpg')
-        background-position: top
-        background-size: cover
+        @include width-height(100vw, 40rem)
+        @include set-background-image('../assets/home/home-header-mobile.jpg', top, cover)
         box-shadow: 0px 8px 21px -2px rgba(24,29,66,0.88)
-        h1
-            color: white
-            font-weight: 300
-            font-family: "Source Code Pro"
-            padding-right: 1rem
+
+    // Home content
     .home-content
-        color: rgb(15,15,35)
-        font-size: 2rem
-        display: flex
-        flex-direction: column
-        justify-content: flex-start
-        align-items: center
-        gap: 2rem
+        @include width-height(100vw, 100%)
+        @include set-background-image('../assets/home/abstract-pattern.jpg', center, cover)
+        @include flexbox(column, flex-start, center, 2rem)
         padding: 2rem 1.5rem 2rem 1rem
-        background-image: url('../assets/home/abstract-pattern.jpg')
-        background-position: center
-        background-size: cover
-        height: 100%
-        width: 100vw
+
+        h1
+            @include set-font(rgb(15,15,35),Roboto, 2.5rem, bold, italic )
+            text-transform: uppercase
 
         .subtitle
-            font-size: 2rem
-            font-weight: 300
-            font-family: "Poppins"
-            font-style: italic
+            @include set-font(rgb(15,15,35),Poppins, 2rem, 300, italic )
 
-        h1
-            font-size: 2.5rem
-            text-transform: uppercase
-            font-style: italic
-
+        // Short Home description
         .home-description
-            font-size: 2rem
+            @include set-font(rgb(15,15,35),Roboto, 2rem, 300, normal )
             line-height: 3.2rem
             max-width: 80%
             text-align: center
 
+        // Home portrait photo (round class added)
         .portrait-photo
-            width: 15rem
-            height: 15rem
-            background-image: url('../assets/shared/profil.jpg')
-            background-position: center
-            background-size: cover
-            border-radius: 50%
-            margin-top: 2rem
+            @include width-height(17rem, 17rem)
+            @include set-background-image('../assets/shared/profil.jpg', center, cover)
             box-shadow: 0px 25px 38px -6px rgba(5,2,38,0.7)
+
+    // Language logos container
     .language-icons
-        margin-top: 2rem
-        display: flex
-        justify-content: center
-        width: 100%
-        gap: 2rem
+        @include width-height(100%, auto)
+        @include flexbox(row, center, flex-start, 2rem)
         flex-wrap: wrap
+        margin-top: 2rem
+        // Each logo
         .language-icon
-            width: 20%
+            @include width-height(20%,20%)
             max-width: 8rem
 
+    // Links button container (Projects, Contact & Github Link)
     .icon-links-container
+        @include width-height(100%, 20rem)
+        @include flexbox(column, flex-start, center, 1.5rem)
         margin: 2rem 0 2rem 0
-        display: flex
-        flex-direction: column
-        align-items: center
-        gap: 1.5rem
-        width: 100%
-        height: 20rem
 
+        // Each Link element
         .icon-link
+            // @include flexbox()
             display: flex
             justify-content: center
             align-items: center
@@ -115,6 +94,8 @@ footer
     a
 
         color: white
+
+    
 
 @include respond(tablet)
     .home-container

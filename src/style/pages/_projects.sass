@@ -1,170 +1,152 @@
+// Mobile design
 .projects-container
+    @include flexbox(column, flex-start, center, 2rem)
     padding-top: 8rem
-    max-width: 160rem
-    min-height: 100vh
-    display: flex
-    flex-direction: column
-    justify-content: flex-start
-    align-items: center
-    gap: 2rem
 
+    // Header (Title and short description)
     header
-        display: flex
-        flex-direction: column
-        align-items: flex-start
-        justify-content: center
-        gap: 1rem
-        width: 100%
+        @include width-height(100%, 100%)
+        @include flexbox(column, flex-start, flex-start, 1.5rem)
         padding: 0 2rem 0 2rem
+
         .page-title
-            font-family: "Roboto"
-            font-size: 2.4rem
-            color: rgb(25,25,45) // Marine Blue
+            @include set-font(rgb(25,25,45), Roboto, 2.5rem, 400, normal)
         .header-description
-            font-size: 1.5rem
-            font-family: "Roboto"
-            line-height: 2.4rem
-            color: rgb(25,25,45) // Marine Blue
+            @include set-font(rgb(25,25,45), Roboto, 1.8rem, 300)
+            line-height: 2.6rem
     .selector-container
-        height: 5rem
+        @include width-height(100%, 4rem)
+        @include flexbox(column, flex-start, center)
+
         .selector-box
-            display: flex
-            justify-content: space-between
-            align-items: center
+            @include width-height(20rem,4rem)
+            @include flexbox(row, space-between, center)
             border: 1px solid rgba(25,25,45,0.8) // Marine Blue
             border-radius: 0.6rem
-            width: 25rem
-            height: 5rem
             padding: 0 0.5rem 0 1rem
 
             .selected-value
-                font-size: 1.5rem
-                font-style: italic
+                @include set-font(rgb(25,25,45), Roboto, 1.5rem, 400, italic)
+
+            // Black arrow dropdown btn 
             .selector-arrow
-                width: 4rem
-                height: 4rem
+                @include width-height(3.5rem,3.5rem)
                 transition: all 0.4s ease
             .rotate
                 transform: rotate(180deg)
 
+        // Values container
         .values
-            height: auto
+            @include width-height(20rem, 20rem)
             margin-top: 0.5rem
             border: 1px solid rgba(25,25,45,0.8) // Marine Blue
             border-radius: 0.6rem
             opacity: 0
             transition: opacity 0.3s linear
             background-color: white
+
+            // Each value
             .value
-                font-size: 1.5rem
-                padding: 1rem
+                @include width-height(100%, 4rem)
+                @include set-font(rgb(25,25,45), Roboto, 1.5rem, 400, normal)
                 border-bottom: 1px solid rgba(25,25,45,0.1) // Marine Blue
+                padding: 1rem
         .expand
             opacity: 1
-    .header-image
-        z-index: -1
-        width: 50%
-    
-    .projects-section
-        width: 100%
-        height: auto
-        // background-color: blue 
 
+    // Image separator between project section and header
+    .header-image
+        @include width-height(40%, auto)
+        z-index: -1
+
+    // Projects section container    
+    .projects-section
+        @include width-height(100%, 100%)
+        padding-top: 2rem
+
+        // Category label
         h2
+            @include set-font(rgb(25,25,45), Roboto, 2rem, 400, normal)
             text-transform: uppercase
             margin: 0 0 1rem 2rem
+        
+        // Each project
         .project
-            width: 100%
-            padding: 5%
-            display: flex
-            flex-direction: column
-            justify-content: space-between
-            gap: 1rem
+            @include width-height(100%, 100%)
+            @include flexbox(column, space-between, flex-start, 1rem)
+            padding: 2rem
+
+            // Project text specs (name, description,photo, link to somewhere, etc..)
             .name
-                font-size: 2.2rem
+                @include set-font(rgb(25,25,45), Roboto, 2.2rem, 400, normal)
             .label
-                font-size: 1.8rem
+                @include set-font(rgb(25,25,45), Roboto, 1.8rem, 400, normal)
             .description
-                font-size: 1.4rem
+                @include set-font(rgb(25,25,45), Roboto, 1.6rem, 400, normal)
+                line-height: 2.2rem
             .project-image
-                width: 100%
-                height: 25rem
+                @include width-height(100%, 25rem)
                 object-fit: cover
                 border-radius: 0.8rem
             .link-container
-                display: flex
-                justify-content: flex-end
-                align-items: center
-                gap: 1rem
+                @include width-height(100%, 4rem)
+                @include flexbox(row, space-between, center, 1rem)
 
                 p
-
-                    font-size: 1.5rem
-                    font-weight: bold
+                    @include set-font(rgb(25,25,45), Roboto, 1.5rem, bold, normal)
                     text-transform: uppercase
+
                 .project-link
-                    height: 4rem
-                    padding: 0.4rem 0 0.4rem 0
-                    margin-top: 0.5rem
+                    @include width-height(100%, 4rem)
+                    @include flexbox(row, center, center, 1rem)
+                    @include set-font(white, Roboto, 1.3rem, 400, normal)
                     min-width: 14rem
-                    text-align: center
                     border-radius: 0.6rem
-                    color: white
                     background-color: rgba(25,25,45,0.8)
-                    font-size: 1.2rem
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    gap: 1rem
                     img
-                        width: 3.5rem
+                        width: 3.2rem
                 .deploy
+                    @include set-font(white, Source Code Pro, 1.3rem, 400, normal)
                     background-color: transparent
                     color: rgba(25,25,45,1)
-                    font-size: 1.4rem
-                    font-family: "Source Code Pro"
                     border: 2px solid rgba(25,25,45,1)
 
+// Tablet Design
 @include respond(tablet)
     .projects-container
+        min-height: 100vh
         header
-            margin-top: 2rem
-            gap: 2rem
+            padding: 1rem 4rem 0 4rem
             .page-title
                 font-size: 3rem
             .header-description
                 font-size: 2.4rem
-                line-height: 3rem
+                line-height: 3.2rem
+
+        // Header image not displayed yet
         .header-image
-            width: 15%
-            align-self: flex-end
-            margin-right: 5rem
             display: none
+
         .selector-container
-            // background-color: green
-            flex-direction: row-reverse
-            align-items: flex-start
-            width: 100%
-            padding: 0 2rem 0 2rem
-            display: flex
-            gap: 1rem
+            @include width-height(100%, 4rem)
+            @include flexbox(row-reverse, flex-start, flex-start,1rem)
+            padding: 0 4rem 0 4rem
             
             .selector-box
-                width: 48%
+                @include width-height(48%,4rem)
                 .selected-value
                     font-size: 2rem
             .values
                 margin: 0
                 width: 50%
                 .value
-                
+        
+        // Projects section style 
         .projects-section
-            display: flex
+            @include flexbox(row, space-between, flex-start, 1rem)
             flex-wrap: wrap
-            justify-content: space-between
-            gap: 2rem
-            padding: 0 1rem 0 1rem
-            margin-top: 14rem
+            padding: 0 2rem 0 2rem
+            margin-top: 15rem
 
             h2
                 font-size: 2.5rem
@@ -172,80 +154,76 @@
                 width: 100%
 
             .project
-                width: 48%
+                @include width-height(49%, 100%)
+                justify-content: flex-start
                 padding: 2rem
-                border-radius: 0.6rem
+                border-radius: 0.4rem
 
                 .name
+                    font-size: 2rem
+                .label
+                    font-size: 2rem
+                .description
+                    font-size: 1.8rem
+                    line-height: 2.6rem
+                    min-height: 12rem
 
-                .project-image
-                    width: auto
-                    height: 25rem
-                    object-fit: cover
-
-
-                .link-container
-                    justify-content: space-between
-
-
+// Desktop design
 @include respond(desktop)
     .projects-container
-        width: 99vw
+        max-width: 140rem
         header
-            margin-top: 2rem
-            gap: 2rem
-            width: 100%
-            padding: 0 3rem 0 3rem
+            padding: 2rem 0 0 0
             .page-title
-                font-size: 3rem
             .header-description
                 font-size: 2.4rem
-                line-height: 3rem
-                max-width: 75%
+                line-height: 3.2rem
+                max-width: 80%
         .header-image
-            width: 20%
-            position: relative
-            left: -20rem
-            top: -5rem
-            display: none
+
+        // Selector container desktop
         .selector-container
-            
+            @include width-height(100%, 5rem)
             .selector-box
-                width: 34rem
+                @include width-height(30rem, 5rem)
                 .selector-arrow
                     cursor: pointer
             .values
-                width: 34rem
+                @include width-height(30rem, 25rem)
                 .value
-                    height: 5rem
+                    @include width-height(100%, 5rem)
+                    @include flexbox(row, flex-start, center)
                     cursor: pointer
-                    display: flex
-                    align-items: center
-                    font-size: 1.8rem
+                    font-size: 2rem
                     &:hover
                         background-color: rgba(25,25,45,0.8)
                         color: white
-                
+        // Project section 
         .projects-section
-            display: flex
+            @include flexbox(row, space-between, flex-start, 2rem)
             flex-wrap: wrap
-            justify-content: space-between
-            gap: 2rem
             padding: 0 1rem 0 1rem
             margin-top: 20rem
+            padding: 0
             h2
-                font-size: 2.5rem
-                margin: 0 0 0 2rem
-                width: 100%
+                margin: 0
 
             .project
-                width: 31%
-                padding: 2rem
+                width: 32%
                 border-radius: 0.6rem
-                z-index: 0
 
+                .description
+                    min-height: 15rem
 
                 .link-container
-                    justify-content: space-between
                     cursor: pointer
+                    p
+                        font-size: 2rem
+                    .project-link
+                        @include set-font(white, Poppins, 1.6rem, 300, normal)
+                        img
+                    .deploy
+                        @include set-font(rgb(25,25,45) , Poppins, 1.6rem, 400, normal)
+
+
 

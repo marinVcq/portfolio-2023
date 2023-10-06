@@ -52,6 +52,11 @@
         "email": "myemail@hotmail.fr",
         "subject": "Contact Inquiry",
         "body": "Hello,\n\nI am reaching out for further information or inquiries."
+    },
+    "resumePage":{
+        "title": "Resume",
+        "description": "Welcome to my resume page! Below, you'll find a link to view and download my latest resume. This document provides a comprehensive overview of my education, skills, and professional experience.",
+        "btnLabel": "Download my CV (PDF)"
     }
 }
 

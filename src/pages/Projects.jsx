@@ -8,7 +8,7 @@ import SelectArrow from '../assets/shared/select-arrow.png';
 import Laptop from '../assets/projects/laptop.png';
 import GithubIcon from '../assets/shared/github-icon-purple.png';
 
-// Context
+// Import context
 import { LanguageContext } from '../components/LanguageContext';
 
 const Projects = () => {
@@ -17,37 +17,8 @@ const Projects = () => {
   const [catDropdown, setCatDropdown] = useState(false)
   const { language, toggleLanguage, translations } = useContext(LanguageContext);
 
-
-  const projects = [
-    // Projects data
-    {
-      name: "C-Based Chat Application", 
-      category: "network", 
-      description: " officiis maxime nostrum explicabo corrupti delectus aspernatur? Est cumque nesciunt iste soluta nihil recusandae, enim quia? ",
-      imagePath: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      github: "github link here",
-      deploy: "yes",
-    },
-    {
-      name: "Streamed Keylogger (Win32 API)", 
-      category: "network", 
-      description: "Lorem, ipsum dolor maxime nostrum explicabo corrupti delectus aspernatur? Est cumque nesciunt iste soluta nihil recusandae, enim quia? ",
-      imagePath: "https://images.unsplash.com/photo-1555532538-dcdbd01d373d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1928&q=80",
-      github: "github link here",
-      deploy: "",
-    },
-    {
-      name: "C-Based HTTP live Server", 
-      category: "network",
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos labore quia cupiditate, dicta, quis officiis maxime nostrum explicabo corrupti delectus aspernatur? Est cumque nesciunt iste soluta nihil recusandae, enim quia? ",
-      imagePath: "https://images.unsplash.com/photo-1664570000007-db164768644d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2017&q=80",
-      github: "github link here",
-      deploy: "",
-    }
-  ];
-
   // Apply filter based on category 
-  const filteredProjects = category.toLowerCase() === "all categories" ? projects : projects.filter((project) => project.category === category);
+  const filteredProjects = category.toLowerCase() === "all categories" ? translations?.projectsPage?.project : translations?.projectsPage?.project.filter((project) => project.category === category);
 
   const handleDropdown = () => {
     setCatDropdown(prev => !prev);

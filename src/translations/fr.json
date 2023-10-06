@@ -51,5 +51,11 @@
         "email": "myemail@hotmail.fr",
         "subject": "Demande de contact",
         "body": "Bonjour,\n\nJe me prends contact avec vous dans le but de..."
+    },
+    "resumePage":{
+        "title": "Parcours",
+        "description": " Ci-dessous, vous trouverez un lien pour consulter et télécharger la dernière version de mon CV, Il donne une vue d'enseemble de mon parcours scolaire, de mes compétences et de mon expérience professionnelle.",
+        "btnLabel": "Télécharger mon CV (PDF)"
+
     }
 }

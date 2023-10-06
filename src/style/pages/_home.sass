@@ -1,6 +1,7 @@
 .home-container
     @include width-height(100vw,100%)
     @include flexbox(column, flex-start,center)
+    min-height: 100vh
 
     // Photo Header style
     .home-header
@@ -23,7 +24,7 @@
 
         // Short Home description
         .home-description
-            @include set-font(rgb(15,15,35),Roboto, 2rem, 300, normal )
+            @include set-font(rgb(15,15,35),Roboto, 1.6rem, 300, normal )
             line-height: 3.2rem
             max-width: 80%
             text-align: center

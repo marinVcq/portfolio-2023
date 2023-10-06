@@ -1,0 +1,81 @@
+// Mobile design
+.resume-container
+    @include width-height(100%, 100vh)
+    @include flexbox(column, space-between, center, 2rem)
+    padding-top: 8rem
+
+    // Header (Title and short description)
+    header
+        @include width-height(100%, 100%)
+        @include flexbox(column, flex-start, flex-start, 1.5rem)
+        padding: 0 2rem 0 2rem
+
+        .page-title
+            @include set-font(rgb(25,25,45), Roboto, 2.5rem, 400, normal)
+        .header-description
+            @include set-font(rgb(25,25,45), Roboto, 1.8rem, 300)
+            line-height: 2.6rem
+    .download-btn
+        @include width-height(30rem,7rem)
+        @include flexbox(row, space-between, center)
+        padding: 1rem 2rem 1rem 2rem
+        @include set-font(rgb(25,25,45), Roboto, 1.8rem,400)
+        border: 2px solid rgb(25,25,45)
+        border-radius: 0.6rem
+        background: transparent
+    .resume-illustration
+        @include width-height(100%, 100%)
+
+// Tablet Design
+@include respond(tablet)
+    .resume-container
+        min-height: 100vh
+        header
+            padding: 1rem 4rem 0 4rem
+            .page-title
+                font-size: 3rem
+            .header-description
+                font-size: 2.4rem
+                line-height: 3.2rem
+        .download-btn
+            @include width-height(35rem,7rem)
+            padding: 2rem 3rem 2rem 3rem
+            @include set-font(rgb(25,25,45), Roboto, 2.2rem,400)
+            border: 3px solid rgb(25,25,45)
+            border-radius: 1rem
+        
+        .resume-illustration
+            @include width-height(60rem, auto)
+
+// Desktop design
+@include respond(desktop)
+    .resume-container
+        max-width: 140rem
+        header
+            padding: 2rem 0 0 0
+            .page-title
+            .header-description
+                font-size: 2.4rem
+                line-height: 3.2rem
+                max-width: 80%
+        .download-btn
+            @include width-height(36rem,6rem)
+            padding: 1.2rem 3.2rem 1.2rem 3.2rem
+            @include set-font(rgb(25,25,45), Roboto, 2rem,400)
+            border: 2px solid rgb(25,25,45)
+            border-radius: 1rem
+            cursor: pointer
+            transition: all 0.2s linear
+
+            img
+                @include width-height(5rem,5rem)
+                cursor: pointer
+            &:hover
+                background-color: rgba(25,25,45,1)
+                color: white
+
+        .resume-illustration
+            @include width-height(45rem, auto)
+
+        
+    

@@ -1,6 +1,6 @@
 // Mobil design
 .navbar-container
-    @include width-height(100%, 7rem)
+    @include width-height(100%, 6rem)
     @include set-position(fixed,0,0)
     z-index: 10
 
@@ -77,18 +77,17 @@
 // Tablet Design
 @include respond(tablet)
     .navbar-container
-        @include width-height(100vw, 7rem)
         @include flexbox(row, space-between, center)
         background-color: rgb(25,25,45) // Marine Blue
 
         // Only the name and the photo
         .top-container
-            @include width-height(40%, 7rem)
+            @include width-height(40%, 6rem)
 
             // Div for Photo and navbar title
             div
                 .navbar-title
-                    font-size: 2.8rem
+                    font-size: 2.5rem
                     padding-left: 2rem
             // Hide Burger btn
             .menu-btn
@@ -104,9 +103,9 @@
             
             // Each Link
             .link
-                @include width-height(100%,7rem)
+                @include width-height(100%,6rem)
                 @include flexbox(row, center, center)
-                @include set-font(white, Roboto, 2.2rem, 300)
+                @include set-font(white, Roboto, 2rem, 300)
                 position: relative
 
                 // White selector line below selected Link
@@ -125,7 +124,7 @@
         .top-container
             div
                 .navbar-title
-                    font-size: 3.2rem
+                    font-size: 2.8rem
                     letter-spacing: 0.3rem
                     padding: 0 0 0 5rem
         .links-container-unwrapped
@@ -134,5 +133,5 @@
 
             // Each Link
             .link
-                font-size: 2.5rem
+                font-size: 2rem
     

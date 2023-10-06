@@ -1,4 +1,92 @@
+// Mobile design
 .contact-container
-    @include width-height(100vw, 100vh)
-    max-width: 160rem
+    @include width-height(100%, 100vh)
+    @include flexbox(column, space-between, center, 2rem)
     padding-top: 8rem
+
+    // Header (Title and short description)
+    header
+        @include width-height(100%, 100%)
+        @include flexbox(column, flex-start, flex-start, 1.5rem)
+        padding: 0 2rem 0 2rem
+
+        .page-title
+            @include set-font(rgb(25,25,45), Roboto, 2.5rem, 400, normal)
+        .header-description
+            @include set-font(rgb(25,25,45), Roboto, 1.8rem, 300)
+            line-height: 2.6rem
+    .contacts-btn-container
+        @include width-height(100%,100%)
+        @include flexbox(column, flex-start, center, 2rem)
+        .contact-btn
+            @include width-height(30rem,5rem)
+            @include flexbox(row, space-between, center)
+            padding: 0 2rem 0 2rem
+            @include set-font(rgb(25,25,45), Roboto, 1.8rem,400)
+            border: 2px solid rgb(25,25,45)
+            border-radius: 0.6rem
+
+            img
+                @include width-height(4rem,4rem)
+    .contact-illustration
+        @include width-height(100%, 100%)
+    
+
+
+// Tablet Design
+@include respond(tablet)
+    .contact-container
+        min-height: 100vh
+        header
+            padding: 1rem 4rem 0 4rem
+            .page-title
+                font-size: 3rem
+            .header-description
+                font-size: 2.4rem
+                line-height: 3.2rem
+
+        .contacts-btn-container
+            gap: 4rem
+            .contact-btn
+                @include width-height(40rem,7rem)
+                padding: 0 4rem 0 4rem
+                @include set-font(rgb(25,25,45), Roboto, 2.2rem,400)
+                border: 3px solid rgb(25,25,45)
+                border-radius: 1rem
+
+                img
+                    @include width-height(5rem,5rem)
+        .contact-illustration
+            @include width-height(60rem, auto)
+
+
+// Desktop design
+@include respond(desktop)
+    .contact-container
+        max-width: 140rem
+        header
+            padding: 2rem 0 0 0
+            .page-title
+            .header-description
+                font-size: 2.4rem
+                line-height: 3.2rem
+                max-width: 80%
+
+        .contacts-btn-container
+            gap: 3rem
+            .contact-btn
+                @include width-height(36rem,6rem)
+                padding: 0 3.2rem 0 3.2rem
+                @include set-font(rgb(25,25,45), Roboto, 2rem,400)
+                border: 3px solid rgb(25,25,45)
+                border-radius: 1rem
+                cursor: pointer
+
+                img
+                    @include width-height(5rem,5rem)
+                    cursor: pointer
+                &:hover
+                    background-color: rgba(25,25,45,1)
+                    color: white
+        .contact-illustration
+            @include width-height(45rem, auto)

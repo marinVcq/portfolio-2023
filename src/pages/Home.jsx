@@ -39,7 +39,6 @@ const HomeLink = ({ to, text,logoDark, logoLight }) => {
 const Home = () => {
 
   return (
-    <>
       <div className='home-container'>
 
         <header className='home-header'></header>
@@ -80,10 +79,6 @@ const Home = () => {
         </div>
 
       </div>
-      <footer>
-        <p>Designed by Marin Durand</p> <p>powered by <a>React.js</a></p>
-      </footer>
-    </>
   )
 }
 

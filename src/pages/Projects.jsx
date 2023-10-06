@@ -110,10 +110,6 @@ const Projects = () => {
 
       </div>
 
-      <footer>
-      <p>Designed by Marin Durand</p> <p>powered by <a>React.js</a></p>
-      </footer>
-
     </>
   )
 }

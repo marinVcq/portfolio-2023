@@ -208,8 +208,9 @@ h2 {
 }
 @media only screen and (min-width: 1025px) {
   .home-container {
-    width: 99vw;
+    width: 100vw;
     height: auto;
+    max-width: 100%;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -248,10 +249,8 @@ h2 {
     width: 70%;
   }
   .home-container .home-content .portrait-photo {
-    width: 35rem;
-    height: 35rem;
-    max-width: 35%;
-    max-height: 35%;
+    width: 30rem;
+    height: 30rem;
   }
   .home-container .language-icons {
     display: flex;
@@ -289,6 +288,26 @@ h2 {
   .home-container .icon-links-container .icon-link:hover {
     background-color: rgba(15, 15, 35, 0.9);
     color: white;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  .home-container .home-content {
+    gap: 2.5rem;
+  }
+  .home-container .home-content .subtitle {
+    font-size: 2.4rem;
+  }
+  .home-container .home-content h1 {
+    font-size: 2.6rem;
+  }
+  .home-container .home-content .home-description {
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    width: 75%;
+  }
+  .home-container .home-content .portrait-photo {
+    width: 20rem;
+    height: 20rem;
   }
 }
 .projects-container {
@@ -647,15 +666,158 @@ h2 {
   }
 }
 .contact-container {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  max-width: 160rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
   padding-top: 8rem;
 }
+.contact-container header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 0 2rem 0 2rem;
+}
+.contact-container header .page-title {
+  color: rgb(25, 25, 45);
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 2.5rem;
+  font-style: normal;
+}
+.contact-container header .header-description {
+  color: rgb(25, 25, 45);
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 1.8rem;
+  font-style: normal;
+  line-height: 2.6rem;
+}
+.contact-container .contacts-btn-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+.contact-container .contacts-btn-container .contact-btn {
+  width: 30rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  padding: 0 2rem 0 2rem;
+  color: rgb(25, 25, 45);
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+  border: 2px solid rgb(25, 25, 45);
+  border-radius: 0.6rem;
+}
+.contact-container .contacts-btn-container .contact-btn img {
+  width: 4rem;
+  height: 4rem;
+}
+.contact-container .contact-illustration {
+  width: 100%;
+  height: 100%;
+}
 
+@media only screen and (min-width: 650px) {
+  .contact-container {
+    min-height: 100vh;
+  }
+  .contact-container header {
+    padding: 1rem 4rem 0 4rem;
+  }
+  .contact-container header .page-title {
+    font-size: 3rem;
+  }
+  .contact-container header .header-description {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+  .contact-container .contacts-btn-container {
+    gap: 4rem;
+  }
+  .contact-container .contacts-btn-container .contact-btn {
+    width: 40rem;
+    height: 7rem;
+    padding: 0 4rem 0 4rem;
+    color: rgb(25, 25, 45);
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 2.2rem;
+    font-style: normal;
+    border: 3px solid rgb(25, 25, 45);
+    border-radius: 1rem;
+  }
+  .contact-container .contacts-btn-container .contact-btn img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .contact-container .contact-illustration {
+    width: 60rem;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .contact-container {
+    max-width: 140rem;
+  }
+  .contact-container header {
+    padding: 2rem 0 0 0;
+  }
+  .contact-container header .header-description {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    max-width: 80%;
+  }
+  .contact-container .contacts-btn-container {
+    gap: 3rem;
+  }
+  .contact-container .contacts-btn-container .contact-btn {
+    width: 36rem;
+    height: 6rem;
+    padding: 0 3.2rem 0 3.2rem;
+    color: rgb(25, 25, 45);
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: normal;
+    border: 3px solid rgb(25, 25, 45);
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  .contact-container .contacts-btn-container .contact-btn img {
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+  }
+  .contact-container .contacts-btn-container .contact-btn:hover {
+    background-color: rgb(25, 25, 45);
+    color: white;
+  }
+  .contact-container .contact-illustration {
+    width: 45rem;
+    height: auto;
+  }
+}
 .navbar-container {
   width: 100%;
-  height: 7rem;
+  height: 6rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -774,8 +936,6 @@ h2 {
 
 @media only screen and (min-width: 650px) {
   .navbar-container {
-    width: 100vw;
-    height: 7rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -785,10 +945,10 @@ h2 {
   }
   .navbar-container .top-container {
     width: 40%;
-    height: 7rem;
+    height: 6rem;
   }
   .navbar-container .top-container div .navbar-title {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     padding-left: 2rem;
   }
   .navbar-container .top-container .menu-btn {
@@ -807,7 +967,7 @@ h2 {
   }
   .navbar-container .links-container-unwrapped .link {
     width: 100%;
-    height: 7rem;
+    height: 6rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -816,7 +976,7 @@ h2 {
     color: white;
     font-family: Roboto;
     font-weight: 300;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-style: normal;
     position: relative;
   }
@@ -837,7 +997,7 @@ h2 {
 }
 @media only screen and (min-width: 1025px) {
   .navbar-container .top-container div .navbar-title {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     letter-spacing: 0.3rem;
     padding: 0 0 0 5rem;
   }
@@ -850,7 +1010,7 @@ h2 {
     gap: 6rem;
   }
   .navbar-container .links-container-unwrapped .link {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 footer {
@@ -902,6 +1062,7 @@ footer a {
 }
 @media only screen and (min-width: 1025px) {
   footer {
+    margin-top: 4rem;
     width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -1,5 +1,5 @@
 import React from 'react'
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useContext} from 'react'
 import {Link} from "react-router-dom"
 
 // Import assets
@@ -9,18 +9,24 @@ import MailLogo from '../assets/shared/mail-blue-icon.png';
 import LinkedinLogoWhite from '../assets/shared/linkedin-icon-white.png';
 import MailLogoWhite from '../assets/shared/mail-white-icon.png';
 
-const email = 'myemail';
-const subject = 'Contact Inquiry';
-const contactQuote = 'Hello,\n\nI am reaching out for further information or inquiries.';
+// Context
+import { LanguageContext } from '../components/LanguageContext';
 
-const handleMailButtonClick = () => {
-  const mailtoURL = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(contactQuote)}`;
-  window.location.href = mailtoURL;
-};
+
 
 // Link with Hover change
 const ContactLink = ({ to, text,logoDark, logoLight }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const { language, toggleLanguage, translations } = useContext(LanguageContext);
+  
+  const email = translations?.contactPage?.email;
+  const subject = translations?.contactPage?.subject;
+  const contactQuote = translations?.contactPage?.body;
+
+  const handleMailButtonClick = () => {
+    const mailtoURL = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(contactQuote)}`;
+    window.location.href = mailtoURL;
+  };
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -46,18 +52,20 @@ const ContactLink = ({ to, text,logoDark, logoLight }) => {
 
 const Contact = () => {
 
+  const { language, toggleLanguage, translations } = useContext(LanguageContext);
+  
   return (
     <div className='contact-container'>
         <header>
-          <h1 className='page-title'>Get in touch</h1>
+          <h1 className='page-title'>{translations?.contactPage?.title}</h1>
           <p className='header-description'>
-            Welcome to my contact page! If you have questions, opportunities, or just want to connect on IT and DevOps topics, I'm all ears. Use the email below or social media. Excited to hear from you!
+            {translations?.contactPage?.description}
           </p>
         </header>
 
         <section className='contacts-btn-container'>
-          <ContactLink to='#' text='Contact Me' logoDark={MailLogo} logoLight={MailLogoWhite}></ContactLink>
-          <ContactLink to='#' text='Contact Me on Linkedin' logoDark={LinkedinLogo} logoLight={LinkedinLogoWhite}></ContactLink>
+          <ContactLink to='#' text={translations?.contactPage?.mailBtn} logoDark={MailLogo} logoLight={MailLogoWhite}></ContactLink>
+          <ContactLink to='#' text={translations?.contactPage?.linkedinBtn} logoDark={LinkedinLogo} logoLight={LinkedinLogoWhite}></ContactLink>
         </section>
 
         <img className='contact-illustration' src={ContactImage}></img>

@@ -290,7 +290,7 @@ h2 {
     color: white;
   }
 }
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1500px) and (min-width: 1025px) {
   .home-container .home-content {
     gap: 2.5rem;
   }
@@ -824,6 +824,19 @@ h2 {
   right: 0;
   bottom: 0;
   z-index: 10;
+}
+.navbar-container .language-btn {
+  width: 6rem;
+  height: 6rem;
+  position: fixed;
+  top: 6rem;
+  left: undefined;
+  right: 0;
+  bottom: 0;
+  margin-right: 1rem;
+}
+.navbar-container .displayed {
+  display: none;
 }
 .navbar-container .background-layer {
   width: 100vw;

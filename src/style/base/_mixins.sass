@@ -1,7 +1,7 @@
 // Set Breakpoint based on viewport
 @mixin respond($breakpoint)
     @if $breakpoint==small-desktop
-        @media only screen and (max-width: 1500px)
+        @media only screen and (max-width: 1500px) and (min-width: 1025px)
             @content
     @if $breakpoint==desktop
         @media only screen and (min-width: 1025px)

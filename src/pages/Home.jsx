@@ -1,5 +1,5 @@
 import React from 'react'
-import {useState, useEffect} from 'react'
+import {useState, useContext, useEffect} from 'react'
 
 // Import assets
 import Mail from '../assets/shared/mail-icon.png';
@@ -10,6 +10,9 @@ import GithubWhite from '../assets/shared/github-icon-white.png';
 import DevWhite from '../assets/shared/dev-icon-white.png';
 
 import { Link } from "react-router-dom";
+
+// Context
+import { LanguageContext } from '../components/LanguageContext';
 
 // Link with Hover change
 const HomeLink = ({ to, text,logoDark, logoLight }) => {
@@ -38,6 +41,9 @@ const HomeLink = ({ to, text,logoDark, logoLight }) => {
 
 const Home = () => {
 
+  const { language, toggleLanguage, translations } = useContext(LanguageContext);
+
+
   return (
       <div className='home-container'>
 
@@ -46,12 +52,14 @@ const Home = () => {
         <section className='home-content'>
 
           <div>
-            <h1>I'm <span>Marin Durand</span></h1>  
-            <p className='subtitle'>Welcome on my student portfolio!</p>
+            <h1>{translations?.homePage?.title}</h1> 
+            <p className='subtitle'>
+              {translations?.homePage?.subtitle}
+            </p>
           </div>
 
           <p className='home-description'>
-            Currently in my third year of a Bachelor's program at Brest Open Campus, I'm studying about software development and IT industry.
+            {translations?.homePage?.description}
           </p>
 
           <div className='portrait-photo round'></div>
@@ -73,9 +81,9 @@ const Home = () => {
 
 
         <div className='icon-links-container'>
-          <HomeLink to='/projects' text='See my projects' logoDark={Dev} logoLight={DevWhite}></HomeLink>
-          <HomeLink to='https://github.com/marinVcq' text='My Github' logoDark={Github} logoLight={GithubWhite}></HomeLink>
-          <HomeLink to='/contact' text='Contact Me' logoDark={Mail} logoLight={MailWhite}></HomeLink>
+          <HomeLink to='/projects' text={translations?.homePage?.projectsLink} logoDark={Dev} logoLight={DevWhite}></HomeLink>
+          <HomeLink to='https://github.com/marinVcq' text={translations?.homePage?.githubLink} logoDark={Github} logoLight={GithubWhite}></HomeLink>
+          <HomeLink to='/contact' text={translations?.homePage?.contactLink} logoDark={Mail} logoLight={MailWhite}></HomeLink>
         </div>
 
       </div>

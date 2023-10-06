@@ -1,0 +1,57 @@
+{
+    "navbar": {
+        "homeLink": "Home",
+        "projectsLink": "Projects",
+        "contactLink": "Contact",
+        "resumeLink": "Resume"
+    },
+
+    "homePage":{
+        "title": "I'm marin durand",
+        "subtitle": "Welcome on my student portfolio!",
+        "description": "Currently in my third year of a Bachelor's program at Brest Open Campus, I'm studying about software development and IT industry.",
+        "projectsLink": "See my projects",
+        "githubLink": "My github",
+        "contactLink": "Contact Me"
+    },
+    "projectsPage":{
+        "title": "My projects",
+        "description": "This section is a curated collection of personal and academic projects, showcasing the hands-on experiences that shape my IT and DevOps exploration.",
+        "project": [
+            {
+                "name": "C-Based Real-time Chat",
+                "description": "Connect with others users through real-time messaging in a WIN32 GUI environment. Developed using C this project allowed me to better understand the low-level functioning of sockets in windows environment.",
+                "repoLink": "https://github.com/marinVcq/chat-App-C",
+                "deployLink": "",
+                "imagePath": "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1600",
+                "category": "network"
+            },
+            {
+                "name": "Streamed Keylogger (Win32 API)",
+                "description": "Simple keylogger written in C that captures keyboard input and sends the logged data over the network using UDP (User Datagram Protocol)",
+                "repoLink": "https://github.com/marinVcq/Windows-KeyLogger-with-UDP-streaming",
+                "deployLink": "",
+                "imagePath": "https://images.unsplash.com/photo-1555532538-dcdbd01d373d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1928&q=80",
+                "category": "network"
+            },
+            {
+                "name": "C/C++ HTTP live server",
+                "description": "Simple HTTP server implemented in C using the Winsock library on Windows. It sets up a basic server that listens for incoming HTTP requests, handles those requests, and sends appropriate responses.",
+                "repoLink": "https://github.com/marinVcq/C-programming-HTTP-Server-",
+                "deployLink": "",
+                "imagePath": "https://images.unsplash.com/photo-1664570000007-db164768644d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2017&q=80",
+                "category": "network"
+            }           
+        ]
+    },
+    "contactPage": {
+        "title": "Get in touch",
+        "description": "Welcome to my contact page! If you have questions, opportunities, or just want to connect on IT and DevOps topics, I'm all ears. Use the email below or social media. Excited to hear from you!",
+        "mailBtn": "Contact me",
+        "linkedinBtn": "Contact me on Linkedin",
+        "email": "myemail@hotmail.fr",
+        "subject": "Contact Inquiry",
+        "body": "Hello,\n\nI am reaching out for further information or inquiries."
+    }
+}
+

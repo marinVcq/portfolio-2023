@@ -27,6 +27,14 @@
                 "category": "network"
             },
             {
+                "name": "Drone simulator using SDL2 and C/C++",
+                "description": "The user navigates on a Google Map screen (8000px X 8000px). Controlled by a simple NES joystick, player can move around, identify a target, and destroy it. The targets follow a predefined route in the program. (Project in progress...)",
+                "repoLink": "https://github.com/marinVcq/C-Based-drone",
+                "deployLink": "",
+                "imagePath": "https://i.imgur.com/pL4DiIF.png",
+                "category": "software"
+            },
+            {
                 "name": "Streamed Keylogger (Win32 API)",
                 "description": "Simple keylogger written in C that captures keyboard input and sends the logged data over the network using UDP (User Datagram Protocol)",
                 "repoLink": "https://github.com/marinVcq/Windows-KeyLogger-with-UDP-streaming",
@@ -41,7 +49,71 @@
                 "deployLink": "",
                 "imagePath": "https://images.unsplash.com/photo-1664570000007-db164768644d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2017&q=80",
                 "category": "network"
-            }           
+            },
+            {
+                "name": "Duck Hunt - NES in C",
+                "description": "A copy of the NES Duck Hunt Game using C programming and SDL2 library. This project is not finish.",
+                "repoLink": "https://github.com/marinVcq/duck-hunter",
+                "deployLink": "",
+                "imagePath": "https://i.imgur.com/zQshxSG.png",
+                "category": "game"
+            },
+            {
+                "name": "Basic catch them all",
+                "description": "A Student Project. The player has 60 seconds to score 70 points by capturing Pokémon. When Pokeballs run out, the player can no longer catch any Pokémon.",
+                "repoLink": "https://github.com/marinVcq/pokemon",
+                "deployLink": "https://marinvcq.github.io/pokemon/",
+                "imagePath": "https://i.ibb.co/2PsxKm1/catch-them-all.png",
+                "category": "game"
+            },
+            {
+                "name": "Advice Generator",
+                "description": "This is a solution to the Advice generator app challenge on Frontend Mentor. Made with SASS/SCSS and Js Vanilla. Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+                "repoLink": "https://github.com/marinVcq/advice-generator-app",
+                "deployLink": "https://marinvcq.github.io/advice-generator-app/",
+                "imagePath": "https://i.ibb.co/SRBFkq2/desktop-activate.png",
+                "category": "web"
+            },
+            {
+                "name": "Neptune Magazine V1",
+                "description": "Website of the Open'Digital association at Brest Open Campus. Made with React Js and Express Js.",
+                "repoLink": "https://github.com/marinVcq/neptune",
+                "deployLink": "https://www.neptune-magazine.fr",
+                "imagePath": "https://i.imgur.com/o6um2yI.png",
+                "category": "web"
+            },
+            {
+                "name": "Calculator App",
+                "description": "This is a solution to the Calculator app challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+                "repoLink": "https://github.com/marinVcq/calculator-app",
+                "deployLink": "https://marinvcq.github.io/calculator-app/",
+                "imagePath": "https://i.ibb.co/L8gc2rN/calculator.png",
+                "category": "web"
+            },
+            {
+                "name": "Dropdown navigation Front-end",
+                "description": "This is a solution to the Intro section with dropdown navigation challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+                "repoLink": "https://github.com/marinVcq/intro-section-with-dropdown-navigation",
+                "deployLink": "https://marinvcq.github.io/intro-section-with-dropdown-navigation/",
+                "imagePath": "https://github.com/marinVcq/intro-section-with-dropdown-navigation/raw/main/screenshots/desktop-activate.png",
+                "category": "web"
+            },
+            {
+                "name": "TODO App (React Js & SASS/SCSS)",
+                "description": "This is a Frontend Mentor solution. User should be able to add, delete, filter and clear his todo list and toggle light and dark mode.",
+                "repoLink": "https://github.com/marinVcq/todo-app",
+                "deployLink": "https://marinvcq.github.io/todo-app/",
+                "imagePath": "https://i.imgur.com/cZJMVb2.png",
+                "category": "web"
+            },
+            {
+                "name": "Dice Roller",
+                "description": "The game involves 2 players on the same screen. Each player has a temporary score (ROUND) and an overall score (GLOBAL). Each turn, a player's ROUND is initialized to 0, and they can roll a dice as many times as they want. The result of each roll is added to the ROUND.",
+                "repoLink": "https://github.com/marinVcq/diceRoller",
+                "deployLink": "https://marinvcq.github.io/diceRoller/",
+                "imagePath": "https://i.imgur.com/ZNlv7kg.png",
+                "category": "game"
+            } 
         ]
     },
     "contactPage": {

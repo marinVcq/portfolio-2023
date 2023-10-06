@@ -21,7 +21,10 @@ const Resume = () => {
           </p>
         </header>
 
-        <button className='download-btn'>{translations?.resumePage?.btnLabel}</button>
+        <button className='download-btn'>
+          <a href='/cv_marin_durand_2023.pdf' download>{translations?.resumePage?.btnLabel}</a>
+        </button>
+
 
         <img className='resume-illustration' src={ResumeImage}></img>
     </div>

@@ -14,17 +14,31 @@ import { LanguageContext } from '../components/LanguageContext';
 const Projects = () => {
 
   const [category, setCategory] = useState("All Categories");
+  const [filteredProjects, setFilteredProjects] = useState([]);
   const [catDropdown, setCatDropdown] = useState(false)
   const { language, toggleLanguage, translations } = useContext(LanguageContext);
 
   // Apply filter based on category 
-  const filteredProjects = category.toLowerCase() === "all categories" ? translations?.projectsPage?.project : translations?.projectsPage?.project.filter((project) => project.category === category);
+  const projectData = translations?.projectsPage?.project;
+
+  useEffect(() => {
+    // Ensure projectData is defined before attempting to filter
+    if (projectData) {
+      const updatedFilteredProjects =
+        category.toLowerCase() === 'all categories'
+          ? projectData
+          : projectData.filter((project) => project.category === category);
+
+      setFilteredProjects(updatedFilteredProjects);
+    }
+  }, [category, projectData]);
 
   const handleDropdown = () => {
     setCatDropdown(prev => !prev);
   }
 
   const handleCat = (category) => {
+
     setCategory(category);
     setCatDropdown(prev => !prev);
   }
@@ -70,16 +84,16 @@ const Projects = () => {
 
             <div key={index} className="project" style={{ backgroundColor: getBackgroundColor(index) }}>
 
-              <p className='name'>{translations?.projectsPage?.project[index]?.name}</p>
+              <p className='name'>{project?.name}</p>
 
-              <img className='project-image' src={translations?.projectsPage?.project[index]?.imagePath}></img>
+              <img className='project-image' src={project?.imagePath}></img>
               <p className='label'>Description</p>
-              <p className='description'>{translations?.projectsPage?.project[index]?.description}</p>
+              <p className='description'>{project?.description}</p>
 
               <div className='link-container'>
-                <Link className='project-link' to={translations?.projectsPage?.project[index]?.repoLink}>View on Github<img src={GithubIcon} alt="Official Github icon"></img></Link>
+                <Link className='project-link' to={project?.repoLink}>View on Github<img src={GithubIcon} alt="Official Github icon"></img></Link>
                 
-                {translations?.projectsPage?.project[index]?.deployLink != "" ? <><p>Or</p><Link className='project-link deploy' to={translations?.projectsPage?.project[index]?.deployLink}>Check deploy</Link></>: "" }
+                {project?.deployLink != "" ? <><p>Or</p><Link className='project-link deploy' to={project?.deployLink}>Check deploy</Link></>: "" }
               </div>
             </div>
           ))}

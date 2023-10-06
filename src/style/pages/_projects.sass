@@ -171,7 +171,7 @@
 // Desktop design
 @include respond(desktop)
     .projects-container
-        max-width: 140rem
+        max-width: 130rem
         header
             padding: 2rem 0 0 0
             .page-title
@@ -200,7 +200,7 @@
                         color: white
         // Project section 
         .projects-section
-            @include flexbox(row, space-between, flex-start, 2rem)
+            @include flexbox(row, center, flex-start, 5rem)
             flex-wrap: wrap
             padding: 0 1rem 0 1rem
             margin-top: 20rem
@@ -209,11 +209,13 @@
                 margin: 0
 
             .project
-                width: 32%
+                width: 45%
                 border-radius: 0.6rem
 
                 .description
                     min-height: 15rem
+                .project-image
+                    @include width-height(100%, 38rem)
 
                 .link-container
                     cursor: pointer
@@ -221,9 +223,19 @@
                         font-size: 2rem
                     .project-link
                         @include set-font(white, Poppins, 1.6rem, 300, normal)
+                        transition: all 0.1s linear
                         img
+                            cursor: pointer
+                        &:hover
+                            background: transparent
+                            border: 3px solid rgba(25,25,45,1)
+                            @include set-font(rgb(25,25,45) , Poppins, 1.6rem, 400, normal)
                     .deploy
                         @include set-font(rgb(25,25,45) , Poppins, 1.6rem, 400, normal)
+                        &:hover
+                            background: rgba(25,25,45,1)
+                            border: none
+                            @include set-font(white , Poppins, 1.6rem, 400, normal)
 
 
 

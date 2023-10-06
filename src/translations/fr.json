@@ -6,7 +6,7 @@
         "resumeLink": "Parcours"        
     },
     "homePage":{
-        "title": "Je suis Marin durand",
+        "title": "Marin durand",
         "subtitle": "Bienvenue sur mon portfolio scolaire!",
         "description": "Actuellement en 3ème année d'un Bachelor DevOps à Brest Open Campus, j'ai dédié ce portfolio au partage de mes projets et de mes expériences.",
         "projectsLink": "Voir mes projets",
@@ -26,6 +26,14 @@
                 "category": "network"
             },
             {
+                "name": "Drone simulator using SDL2 and C/C++",
+                "description": "L'utilisateur se déplace sur un screen de google map (8000px X 8000px). commandé par une manette il peut se deplacer identifier une cible et la détruire. Les cibles suivent un itineraire définit dans le programme. (projet en cours...)",
+                "repoLink": "https://github.com/marinVcq/C-Based-drone",
+                "deployLink": "",
+                "imagePath": "https://i.imgur.com/pL4DiIF.png",
+                "category": "software"
+            },
+            {
                 "name": "Streamed Keylogger (Win32 API)",
                 "description": "Simple keylogger écrit en C, ce programme console capture les saisies clavier et envoie les données enregistrées sur le réseau en utilisant le protocole UDP (User Datagram Protocol).",
                 "repoLink": "https://github.com/marinVcq/Windows-KeyLogger-with-UDP-streaming",
@@ -40,7 +48,71 @@
                 "deployLink": "",
                 "imagePath": "https://images.unsplash.com/photo-1664570000007-db164768644d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2017&q=80",
                 "category": "network"
-            }
+            },
+            {
+                "name": "Duck Hunt - NES in C",
+                "description": "Copie du jeu NES Duck Hunt (NES Zapper) en langage C à l'aide de la librairie SDL2. (Projet en cours...)",
+                "repoLink": "https://github.com/marinVcq/duck-hunter",
+                "deployLink": "",
+                "imagePath": "https://i.imgur.com/zQshxSG.png",
+                "category": "game"
+            },
+            {
+                "name": "Basic catch them all",
+                "description": "Projet scolaire. Le joueur à 60 secondes pour faire un score de 70 points en capturant des Pokémons.",
+                "repoLink": "https://github.com/marinVcq/pokemon",
+                "deployLink": "https://marinvcq.github.io/pokemon/",
+                "imagePath": "https://i.ibb.co/2PsxKm1/catch-them-all.png",
+                "category": "game"
+            },
+            {
+                "name": "Advice Generator",
+                "description": "Ceci est une solution au défi Advice Generator sur Frontend Mentor. Réalisé avec SASS et Js Vanilla. Les défis de Frontend-Mentor aide à améliorer ses compétences en programmation Front-end en construisant des projets réalistes.",
+                "repoLink": "https://github.com/marinVcq/advice-generator-app",
+                "deployLink": "https://marinvcq.github.io/advice-generator-app/",
+                "imagePath": "https://i.ibb.co/SRBFkq2/desktop-activate.png",
+                "category": "web"
+            },
+            {
+                "name": "Neptune Magazine V1",
+                "description": "Site internet de l'association Open'Digital de Brest Open Campus. Fait avec React Js et Express Js.",
+                "repoLink": "https://github.com/marinVcq/neptune",
+                "deployLink": "https://www.neptune-magazine.fr",
+                "imagePath": "https://i.imgur.com/o6um2yI.png",
+                "category": "web"
+            },
+            {
+                "name": "Calculator App",
+                "description": "Ceci est une solution au défi Calculator App sur Frontend Mentor. Les défis de Frontend-Mentor aide à améliorer ses compétences en programmation Front-end en construisant des projets réalistes.",
+                "repoLink": "https://github.com/marinVcq/calculator-app",
+                "deployLink": "https://marinvcq.github.io/calculator-app/",
+                "imagePath": "https://i.ibb.co/L8gc2rN/calculator.png",
+                "category": "web"
+            },
+            {
+                "name": "Dropdown navigation Front-end",
+                "description": "Ceci est une solution au défi Dropdown menu sur Frontend Mentor. Réalisé avec SASS et Js Vanilla. Les défis de Frontend-Mentor aide à améliorer ses compétences en programmation Front-end en construisant des projets réalistes.",
+                "repoLink": "https://github.com/marinVcq/intro-section-with-dropdown-navigation",
+                "deployLink": "https://marinvcq.github.io/intro-section-with-dropdown-navigation/",
+                "imagePath": "https://github.com/marinVcq/intro-section-with-dropdown-navigation/raw/main/screenshots/desktop-activate.png",
+                "category": "web"
+            },
+            {
+                "name": "TODO App (React Js & SASS/SCSS)",
+                "description": "Solution au challenge TODO Frontend Mentor. L'utilisateur doit être capable d'ajouter, supprimer, filtrer et effacer une ou plusieurs tâches de sa liste, ainsi que de switcher entre le mode clair et sombre",
+                "repoLink": "https://github.com/marinVcq/todo-app",
+                "deployLink": "https://marinvcq.github.io/todo-app/",
+                "imagePath": "https://i.imgur.com/cZJMVb2.png",
+                "category": "web"
+            },
+            {
+                "name": "Dice Roller",
+                "description": "Le jeu comprend 2 joueurs sur un seul et même écran. Chaque joueur possède un score temporaire (ROUND) et un score global (GLOBAL). À chaque tour, le joueur a son ROUND initialisé à 0 et peut lancer un dé autant de fois qu'il le souhaite. Le résultat d’un lancer est ajouté au ROUND.",
+                "repoLink": "https://github.com/marinVcq/diceRoller",
+                "deployLink": "https://marinvcq.github.io/diceRoller/",
+                "imagePath": "https://i.imgur.com/ZNlv7kg.png",
+                "category": "game"
+            }    
         ]
     },
     "contactPage": {

@@ -65,7 +65,7 @@ const Navbar = () => {
         <img src={!navbarExpand ? Burger: Close} alt="burger btn" className={`menu-btn ${navbarExpand ? "rotate" : ""}`} onClick={handleToggle}></img>
       </div>
 
-      <img className={`language-btn ${navbarExpand ? "displayed" : ""}`} src={language === 'en' ? FrenchFlag : EnglishFlag} onClick={toggleLanguage}></img>
+      <img className={`language-btn ${navbarExpand ? "displayed" : ""}`} src={language === 'en' ? FrenchFlag : EnglishFlag} onClick={toggleLanguage} alt="Language toggle button"></img>
 
       <div className={`links-container-wrapped ${navbarExpand ? "expand" : ""}`}>
         <Link className='link' to="/" onClick={navbarExpand ? handleToggle : null}><span>&#62;</span>{translations?.navbar?.homeLink}</Link>

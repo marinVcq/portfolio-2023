@@ -6,12 +6,12 @@
     // Photo Header style
     .home-header
         @include width-height(100vw, 40rem)
-        @include set-background-image('../assets/home/home-header-mobile.jpg', top, cover)
+        @include set-background-image('../assets/home/home-header-mobile.webp', top, cover)
 
     // Home content
     .home-content
         @include width-height(100vw, 100%)
-        @include set-background-image('../assets/home/abstract-pattern.jpg', center, cover)
+        @include set-background-image('../assets/home/abstract-pattern.webp', center, cover)
         @include flexbox(column, flex-start, center, 2rem)
         padding: 2rem 1.5rem 2rem 1rem
 
@@ -32,7 +32,7 @@
         // Home portrait photo (round class added)
         .portrait-photo
             @include width-height(17rem, 17rem)
-            @include set-background-image('../assets/shared/profil.jpg', center, cover)
+            @include set-background-image('../assets/shared/profil.webp', center, cover)
             box-shadow: 0px 25px 38px -6px rgba(5,2,38,0.7)
 
     // Language logos container
@@ -99,12 +99,13 @@
         // Home's dektop header photo
         .home-header
             @include width-height(40%, 100vh)
-            @include set-background-image('../assets/home/home-header-desktop.png',top, cover)
+            // @include set-background-image('../assets/home/home-header-desktop-sized.png',top, cover)
+            @include set-background-image('../assets/home/home-header-desktop.webp',top, cover)
         
         // Home's desktop content
         .home-content
             @include width-height(60%, 100vh)
-            @include set-background-image('../assets/home/abstract-pattern-desktop.jpg',top, cover)
+            @include set-background-image('../assets/home/abstract-pattern-desktop.webp',top, cover)
             @include flexbox(column,center,center, 4rem)
             padding: 8rem 0 0 0
 

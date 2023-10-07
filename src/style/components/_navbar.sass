@@ -41,7 +41,7 @@
             //Navbar profil photo
             .profil-photo // rounded by class
                 @include width-height(4.4rem, 4.4rem)
-                @include set-background-image('../assets/shared/profil.jpg', center, cover)
+                @include set-background-image('../assets/shared/profil.webp', center, cover)
                 display: none
 
             // Navbar Brand
@@ -79,6 +79,8 @@
         .wrap-menu-btn
             @include width-height(100%, 6rem)
             text-align: center
+            img
+                @include width-height(5rem,5rem)
 
     .expand
         visibility: visible

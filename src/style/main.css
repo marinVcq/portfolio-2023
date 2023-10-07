@@ -75,14 +75,14 @@ h2 {
 .home-container .home-header {
   width: 100vw;
   height: 40rem;
-  background-image: url("../assets/home/home-header-mobile.jpg");
+  background-image: url("../assets/home/home-header-mobile.webp");
   background-position: top;
   background-size: cover;
 }
 .home-container .home-content {
   width: 100vw;
   height: 100%;
-  background-image: url("../assets/home/abstract-pattern.jpg");
+  background-image: url("../assets/home/abstract-pattern.webp");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -120,7 +120,7 @@ h2 {
 .home-container .home-content .portrait-photo {
   width: 17rem;
   height: 17rem;
-  background-image: url("../assets/shared/profil.jpg");
+  background-image: url("../assets/shared/profil.webp");
   background-position: center;
   background-size: cover;
   box-shadow: 0px 25px 38px -6px rgba(5, 2, 38, 0.7);
@@ -223,14 +223,14 @@ h2 {
   .home-container .home-header {
     width: 40%;
     height: 100vh;
-    background-image: url("../assets/home/home-header-desktop.png");
+    background-image: url("../assets/home/home-header-desktop.webp");
     background-position: top;
     background-size: cover;
   }
   .home-container .home-content {
     width: 60%;
     height: 100vh;
-    background-image: url("../assets/home/abstract-pattern-desktop.jpg");
+    background-image: url("../assets/home/abstract-pattern-desktop.webp");
     background-position: top;
     background-size: cover;
     display: flex;
@@ -1042,7 +1042,7 @@ h2 {
 .navbar-container .top-container div .profil-photo {
   width: 4.4rem;
   height: 4.4rem;
-  background-image: url("../assets/shared/profil.jpg");
+  background-image: url("../assets/shared/profil.webp");
   background-position: center;
   background-size: cover;
   display: none;
@@ -1105,6 +1105,10 @@ h2 {
   width: 100%;
   height: 6rem;
   text-align: center;
+}
+.navbar-container .links-container-wrapped .wrap-menu-btn img {
+  width: 5rem;
+  height: 5rem;
 }
 .navbar-container .expand {
   visibility: visible;

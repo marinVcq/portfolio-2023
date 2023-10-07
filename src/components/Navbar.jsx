@@ -8,7 +8,7 @@ import DoubleArrow from '../assets/shared/double_arrow.png';
 import FrenchFlag from '../assets/shared/french-icon.png';
 import EnglishFlag from '../assets/shared/english-icon.png';
 
-// Context
+// Import context
 import { LanguageContext } from '../components/LanguageContext';
 
 

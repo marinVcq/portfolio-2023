@@ -1,6 +1,7 @@
 // Mobile design
 .projects-container
     @include flexbox(column, flex-start, center, 2rem)
+    
     padding-top: 8rem
 
     // Header (Title and short description)
@@ -171,9 +172,10 @@
 // Desktop design
 @include respond(desktop)
     .projects-container
+        background-color: white
         max-width: 130rem
         header
-            padding: 2rem 0 0 0
+            padding: 2rem 3.8rem 0 3.8rem
             .page-title
             .header-description
                 font-size: 2.4rem
@@ -206,6 +208,7 @@
             margin-top: 20rem
             padding: 0
             h2
+                padding-left: 3.8rem
                 margin: 0
 
             .project

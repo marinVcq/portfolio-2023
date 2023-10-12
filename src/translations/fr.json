@@ -34,6 +34,22 @@
                 "category": "software"
             },
             {
+                "name": "Expenses Manager C#",
+                "description": "Projet scolaire développé au cours de ma deuxième année d'études. Ce gestionnaire de dépenses permet aux utilisateurs de suivre et de gérer efficacement leurs dépenses. L'application propose une interface conviviale pour ajouter, modifier et supprimer des dépenses, ainsi que des représentations graphiques des données de dépenses à travers des graphiques et des diagrammes.",
+                "repoLink": "https://github.com/marinVcq/wallet-manager-Csharp",
+                "deployLink": "",
+                "imagePath": "https://i.imgur.com/51wpW64.png",
+                "category": "software"
+            },
+            {
+                "name": "REST Countries API (React.js)",
+                "description": "Challenge Front-end Mentor",
+                "repoLink": "https://github.com/marinVcq/REST-countries-API",
+                "deployLink": "https://marinvcq.github.io/REST-countries-API/",
+                "imagePath": "https://i.imgur.com/6PfsbbQ.png",
+                "category": "web"
+            },
+            {
                 "name": "Streamed Keylogger (Win32 API)",
                 "description": "Simple keylogger écrit en C, ce programme console capture les saisies clavier et envoie les données enregistrées sur le réseau en utilisant le protocole UDP (User Datagram Protocol).",
                 "repoLink": "https://github.com/marinVcq/Windows-KeyLogger-with-UDP-streaming",

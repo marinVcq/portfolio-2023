@@ -18,6 +18,14 @@
         "description": "Cette section est une collection de projets personnels et scolaires, mettant en avant mes expériences pratiques en programmation et mes connaissances en informatique.",
         "project": [
             {
+                "name": "Responsive Homepage challenge (React.js & SASS)",
+                "description": "Front-End Mentor challenge",
+                "repoLink": "https://github.com/marinVcq/Room-homepage-challenge",
+                "deployLink": "https://marinvcq.github.io/Room-homepage-challenge/",
+                "imagePath": "https://i.imgur.com/8S7DcpV.png",
+                "category": "web"
+            },
+            {
                 "name": "C-Based Real-time Chat",
                 "description": "Une interface basique qui permet de se connecter avec d'autres utilisateurs via une messagerie en temps réel dans un environnement windows. Développé en langage C, ce projet m'a permis de mieux comprendre le fonctionnement bas niveau des sockets en environnement Windows.",
                 "repoLink": "https://github.com/marinVcq/chat-App-C",

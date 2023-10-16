@@ -19,6 +19,14 @@
         "description": "This section is a curated collection of personal and academic projects, showcasing the hands-on experiences that shape my IT and DevOps exploration.",
         "project": [
             {
+                "name": "Responsive Homepage challenge (React.js & SASS)",
+                "description": "Front-End Mentor challenge",
+                "repoLink": "https://github.com/marinVcq/Room-homepage-challenge",
+                "deployLink": "https://marinvcq.github.io/Room-homepage-challenge/",
+                "imagePath": "https://i.imgur.com/8S7DcpV.png",
+                "category": "web"
+            },
+            {
                 "name": "C-Based Real-time Chat",
                 "description": "Connect with others users through real-time messaging in a WIN32 GUI environment. Developed using C this project allowed me to better understand the low-level functioning of sockets in windows environment.",
                 "repoLink": "https://github.com/marinVcq/chat-App-C",
